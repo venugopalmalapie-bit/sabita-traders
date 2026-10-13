@@ -1,0 +1,36 @@
+SABITA TRADERS WEBSITE – SEO / AI-SEARCH LAUNCH CHECKLIST
+
+HOW TO OPEN: double-click index.html (works offline), or visit the GitHub Pages link below. Every page links to every other page.
+
+BEFORE GO-LIVE (must do)
+1. Test site now: https://venugopalmalapie-bit.github.io/sabita-traders/ (hidden from Google).
+   Go-live: buy the domain, set SITE_URL to it and PREVIEW = False in build/prod.py, rebuild,
+   and add the domain under GitHub Settings -> Pages -> Custom domain.
+2. Permissions: written OK from John Deere for photos, brochures and logo, and from each
+   finance partner for its logo.
+3. Logos: ask John Deere Financial and SBI for high-resolution logo files (current ones are small).
+4. Hosting: upload the whole folder (HTML files + images/ + robots.txt + sitemap.xml + llms.txt)
+   to the site root, with HTTPS on.
+5. Analytics: create a GA4 property and put the ID (G-XXXX) in GA_ID in build/prod.py, then rebuild.
+   WhatsApp, call, brochure and video clicks are already tracked as events.
+6. Confirm with the dealer: privacy line on forms, email address, and the 6 FAQ answers.
+
+AFTER GO-LIVE (week 1)
+7. Google Search Console: verify the domain, submit sitemap.xml, request indexing for all 12 pages.
+8. Bing Webmaster Tools: import from Search Console (Bing also feeds ChatGPT and Copilot search).
+9. Google Business Profile ("Krishna Motors Tractor" listing): rename to Sabita Traders, category
+   "Tractor dealer", add website URL, WhatsApp, hours, 10+ real photos, products (3 tractors).
+   Keep name, address and phone EXACTLY as on the website (NAP consistency).
+
+BACKLINKS AND CITATIONS (same name, address, phone everywhere)
+10. John Deere India dealer locator: ask the territory manager to link the dealer page to the website.
+11. Free listings: JustDial, IndiaMART, Sulekha, TractorJunction and TractorGuru dealer listings,
+    Bing Places, Apple Business Connect.
+12. Social profiles: Facebook page, YouTube channel, Instagram – each links to the website.
+13. Local: finance partners' branch pages, agriculture input dealers, Ganjam farmer groups/FPOs,
+    local news on deliveries and melas (ask for a link each time).
+
+EVERY MONTH
+14. Add real customer delivery photos (with consent) and ask happy buyers for Google reviews.
+15. Post one update (offer, mela, new model) on Google Business Profile and the News section.
+16. Check Search Console for queries and pages with clicks; improve those pages first.
