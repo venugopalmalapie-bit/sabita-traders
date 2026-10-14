@@ -9,7 +9,7 @@
 - Open: every day, 10 AM to 8 PM
 - Areas served: Berhampur, Aska, Bhanjanagar and the rest of Ganjam district
 - Tractors: John Deere 5045D PowerPro 4WD (46 HP), 5050D (50 HP, 2WD and 4WD), 5105 4WD (40 HP)
-- Finance partners: John Deere Financial, State Bank of India, Axis Bank, Kotak Mahindra Bank, IndusInd Bank, Shriram Finance, Sundaram Finance
+- Finance partners (11): John Deere Financial India Pvt Ltd, State Bank of India, Axis Bank, Kotak Mahindra Bank, IndusInd Bank, HDFC Bank, DCB Bank, Shriram Finance, Sundaram Finance, L&T Finance, Cholamandalam Finance
 - Warranty: John Deere tractors carry a 5-year / 5,000-hour warranty, free and transferable, valid with scheduled service at an authorised workshop
 - Prices, EMI and exchange values on the website are indicative; ask the dealer for a quote
 
@@ -21,7 +21,7 @@
 - [John Deere 5039D PowerPro (41 HP) 2WD Specs](https://venugopalmalapie-bit.github.io/sabita-traders/john-deere-5039d-powerpro.html): 41 HP John Deere 5039D PowerPro 2WD with dual clutch, dual PTO and 1600 kgf lift. See full specs and EMI, and book a test drive at Sabita Traders, Berhampur.
 - [John Deere 5105 2WD (40 HP) Specs](https://venugopalmalapie-bit.github.io/sabita-traders/john-deere-5105-2wd.html): 40 HP John Deere 5105 2WD with 2900 cc engine, 8F+4R gears and 1600 kgf lift. See full specs, implements and EMI at Sabita Traders, Berhampur.
 - [John Deere Implements for Paddy, Sugarcane & Pulses](https://venugopalmalapie-bit.github.io/sabita-traders/john-deere-implements-ganjam.html): Rotary tillers, puddlers, seed drills, planters, ratoon managers, ridgers and ploughs matched to John Deere tractors for Ganjam crops. Ask the price on WhatsApp.
-- [Tractor Loan & EMI Calculator](https://venugopalmalapie-bit.github.io/sabita-traders/tractor-loan-emi-calculator.html): Work out your John Deere tractor EMI. Loans through John Deere Financial, SBI, Axis, Kotak, IndusInd, Shriram and Sundaram, with Odisha DBT subsidy help.
+- [Tractor Loan & EMI Calculator](https://venugopalmalapie-bit.github.io/sabita-traders/tractor-loan-emi-calculator.html): Work out your John Deere tractor EMI. Loans from John Deere Financial India and 10 partner banks and NBFCs, with Odisha DBT subsidy help.
 - [Old Tractor Exchange Value Calculator](https://venugopalmalapie-bit.github.io/sabita-traders/old-tractor-exchange-value.html): Get an indicative exchange value for your old tractor of any brand in one minute and use it as down payment on a new John Deere. Final price after inspection.
 - [John Deere Service Centre in Berhampur](https://venugopalmalapie-bit.github.io/sabita-traders/john-deere-service-centre-berhampur.html): Authorised John Deere workshop on NH5 Pathara Byepass, Berhampur. Scheduled service, repairs, genuine parts and 5-year warranty support. Book on WhatsApp.
 - [Farmer Guides, Tractor Brochures & Odisha Subsidy Schemes](https://venugopalmalapie-bit.github.io/sabita-traders/farmer-resources.html): John Deere videos and brochures, plus plain guides to tractor loans, insurance, RTO registration, exchange, DBT subsidy and Odisha farm mechanisation schemes.
