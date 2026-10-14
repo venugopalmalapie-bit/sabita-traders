@@ -122,29 +122,29 @@ nav::-webkit-scrollbar{display:none}
     <h2 class="d" style="margin:0;font-size:36px">Popular John Deere tractors</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
       
-        <a href="john-deere-5045d-powerpro-4wd.html" style="border:1px solid #D9DACF;border-radius:20px;overflow:hidden;text-decoration:none;color:#27251F;display:flex;flex-direction:column">
-          <img src="images/john-deere-5045d-powerpro-4wd-tractor.webp" alt="John Deere 5045D PowerPro™ 4WD tractor" style="width:100%;height:210px;object-fit:contain;background:#FFFFFF;display:block;box-sizing:border-box;padding:14px">
+        <a href="john-deere-5045d-powerpro.html" style="border:1px solid #D9DACF;border-radius:20px;overflow:hidden;text-decoration:none;color:#27251F;display:flex;flex-direction:column">
+          <img src="images/john-deere-5045d-powerpro-4wd-tractor.webp" alt="John Deere 5045D PowerPro™ 2WD/4WD tractor" style="width:100%;height:210px;object-fit:contain;background:#FFFFFF;display:block;box-sizing:border-box;padding:14px">
           <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:6px;border-top:1px solid #E7E8E0">
-            <h3 class="d" style="margin:0;font-size:24px">John Deere 5045D PowerPro™ 4WD</h3>
+            <h3 class="d" style="margin:0;font-size:24px">John Deere 5045D PowerPro™ 2WD/4WD</h3>
             <span style="font-size:15px;color:#5C5A52">46 HP · Our best seller</span>
             <span style="font-weight:700;color:#367C2B">See details ›</span>
           </div>
         </a>
       
         <a href="john-deere-5050d.html" style="border:1px solid #D9DACF;border-radius:20px;overflow:hidden;text-decoration:none;color:#27251F;display:flex;flex-direction:column">
-          <img src="images/john-deere-5050d-tractor.webp" alt="John Deere 5050D tractor" style="width:100%;height:210px;object-fit:contain;background:#FFFFFF;display:block;box-sizing:border-box;padding:14px">
+          <img src="images/john-deere-5050d-tractor.webp" alt="John Deere 5050D 2WD/4WD tractor" style="width:100%;height:210px;object-fit:contain;background:#FFFFFF;display:block;box-sizing:border-box;padding:14px">
           <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:6px;border-top:1px solid #E7E8E0">
-            <h3 class="d" style="margin:0;font-size:24px">John Deere 5050D</h3>
+            <h3 class="d" style="margin:0;font-size:24px">John Deere 5050D 2WD/4WD</h3>
             <span style="font-size:15px;color:#5C5A52">50 HP · D Series</span>
             <span style="font-weight:700;color:#367C2B">See details ›</span>
           </div>
         </a>
       
         <a href="john-deere-5105.html" style="border:1px solid #D9DACF;border-radius:20px;overflow:hidden;text-decoration:none;color:#27251F;display:flex;flex-direction:column">
-          <img src="images/john-deere-5105-4wd-tractor.webp" alt="John Deere 5105 tractor" style="width:100%;height:210px;object-fit:contain;background:#FFFFFF;display:block;box-sizing:border-box;padding:14px">
+          <img src="images/john-deere-5105-4wd-tractor.webp" alt="John Deere 5105 2WD/4WD tractor" style="width:100%;height:210px;object-fit:contain;background:#FFFFFF;display:block;box-sizing:border-box;padding:14px">
           <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:6px;border-top:1px solid #E7E8E0">
-            <h3 class="d" style="margin:0;font-size:24px">John Deere 5105</h3>
-            <span style="font-size:15px;color:#5C5A52">40 HP · D Series · 2WD and 4WD</span>
+            <h3 class="d" style="margin:0;font-size:24px">John Deere 5105 2WD/4WD</h3>
+            <span style="font-size:15px;color:#5C5A52">40 HP · D Series</span>
             <span style="font-weight:700;color:#367C2B">See details ›</span>
           </div>
         </a>
@@ -305,9 +305,9 @@ class Component extends DCLogic {
     const ok = f.name.trim() && /^\d{10}$/.test(f.phone.replace(/\D/g, '').slice(-10)) && f.village.trim();
     const msg = 'Hi, I am ' + f.name + ' from ' + f.village + ', near Bhanjanagar (' + f.phone + '). Please call me about a John Deere tractor.';
     const more = { models: [
-      { name: '5045D PowerPro™ 4WD', hp: '46 HP', series: 'Our best seller', img: 'images/john-deere-5045d-powerpro-4wd-tractor.webp', href: 'john-deere-5045d-powerpro-4wd.html' },
-      { name: '5050D', hp: '50 HP', series: 'D Series', img: 'images/john-deere-5050d-tractor.webp', href: 'john-deere-5050d.html' },
-      { name: '5105', hp: '40 HP', series: 'D Series · 2WD and 4WD', img: 'images/john-deere-5105-4wd-tractor.webp', href: 'john-deere-5105.html' },
+      { name: '5045D PowerPro™ 2WD/4WD', hp: '46 HP', series: 'Our best seller', img: 'images/john-deere-5045d-powerpro-4wd-tractor.webp', href: 'john-deere-5045d-powerpro.html' },
+      { name: '5050D 2WD/4WD', hp: '50 HP', series: 'D Series', img: 'images/john-deere-5050d-tractor.webp', href: 'john-deere-5050d.html' },
+      { name: '5105 2WD/4WD', hp: '40 HP', series: 'D Series', img: 'images/john-deere-5105-4wd-tractor.webp', href: 'john-deere-5105.html' },
       { name: '5039D PowerPro™ 2WD', hp: '41 HP', series: 'PowerPro', img: 'images/john-deere-5039d-powerpro-2wd-tractor.webp', href: 'john-deere-5039d-powerpro.html' }
     ] };
     return Object.assign({
