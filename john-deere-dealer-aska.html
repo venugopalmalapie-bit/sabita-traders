@@ -140,11 +140,20 @@ nav::-webkit-scrollbar{display:none}
           </div>
         </a>
       
-        <a href="john-deere-5105-4wd.html" style="border:1px solid #D9DACF;border-radius:20px;overflow:hidden;text-decoration:none;color:#27251F;display:flex;flex-direction:column">
-          <img src="images/john-deere-5105-4wd-tractor.webp" alt="John Deere 5105 4WD tractor" style="width:100%;height:210px;object-fit:contain;background:#FFFFFF;display:block;box-sizing:border-box;padding:14px">
+        <a href="john-deere-5105.html" style="border:1px solid #D9DACF;border-radius:20px;overflow:hidden;text-decoration:none;color:#27251F;display:flex;flex-direction:column">
+          <img src="images/john-deere-5105-4wd-tractor.webp" alt="John Deere 5105 tractor" style="width:100%;height:210px;object-fit:contain;background:#FFFFFF;display:block;box-sizing:border-box;padding:14px">
           <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:6px;border-top:1px solid #E7E8E0">
-            <h3 class="d" style="margin:0;font-size:24px">John Deere 5105 4WD</h3>
-            <span style="font-size:15px;color:#5C5A52">40 HP · D Series</span>
+            <h3 class="d" style="margin:0;font-size:24px">John Deere 5105</h3>
+            <span style="font-size:15px;color:#5C5A52">40 HP · D Series · 2WD and 4WD</span>
+            <span style="font-weight:700;color:#367C2B">See details ›</span>
+          </div>
+        </a>
+      
+        <a href="john-deere-5039d-powerpro.html" style="border:1px solid #D9DACF;border-radius:20px;overflow:hidden;text-decoration:none;color:#27251F;display:flex;flex-direction:column">
+          <img src="images/john-deere-5039d-powerpro-2wd-tractor.webp" alt="John Deere 5039D PowerPro™ 2WD tractor" style="width:100%;height:210px;object-fit:contain;background:#FFFFFF;display:block;box-sizing:border-box;padding:14px">
+          <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:6px;border-top:1px solid #E7E8E0">
+            <h3 class="d" style="margin:0;font-size:24px">John Deere 5039D PowerPro™ 2WD</h3>
+            <span style="font-size:15px;color:#5C5A52">41 HP · PowerPro</span>
             <span style="font-weight:700;color:#367C2B">See details ›</span>
           </div>
         </a>
@@ -298,7 +307,8 @@ class Component extends DCLogic {
     const more = { models: [
       { name: '5045D PowerPro™ 4WD', hp: '46 HP', series: 'Our best seller', img: 'images/john-deere-5045d-powerpro-4wd-tractor.webp', href: 'john-deere-5045d-powerpro-4wd.html' },
       { name: '5050D', hp: '50 HP', series: 'D Series', img: 'images/john-deere-5050d-tractor.webp', href: 'john-deere-5050d.html' },
-      { name: '5105 4WD', hp: '40 HP', series: 'D Series', img: 'images/john-deere-5105-4wd-tractor.webp', href: 'john-deere-5105-4wd.html' }
+      { name: '5105', hp: '40 HP', series: 'D Series · 2WD and 4WD', img: 'images/john-deere-5105-4wd-tractor.webp', href: 'john-deere-5105.html' },
+      { name: '5039D PowerPro™ 2WD', hp: '41 HP', series: 'PowerPro', img: 'images/john-deere-5039d-powerpro-2wd-tractor.webp', href: 'john-deere-5039d-powerpro.html' }
     ] };
     return Object.assign({
       f, on: { name: (e) => this.setState({ name: e.target.value }), phone: (e) => this.setState({ phone: e.target.value }), village: (e) => this.setState({ village: e.target.value }) },
