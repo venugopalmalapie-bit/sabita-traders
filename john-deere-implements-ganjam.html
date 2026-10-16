@@ -383,9 +383,11 @@ nav::-webkit-scrollbar{display:none}
       if (!kind) return;
       var v = el.value, pos = el.selectionStart == null ? v.length : el.selectionStart;
       var clean = function (s) {
+        var pct = kind === 'dec' && /%/.test(s);
         s = s.replace(kind === 'dec' ? /[^0-9.]/g : /[^0-9]/g, '');
         if (kind === 'dec') { var i = s.indexOf('.'); if (i > -1) s = s.slice(0, i + 1) + s.slice(i + 1).replace(/\./g, ''); }
-        return s.replace(/^0+(?=\d)/, '');
+        s = s.replace(/^0+(?=\d)/, '');
+        return pct && s ? s + '%' : s;
       };
       var nv = clean(v);
       if (nv !== v) { var np = clean(v.slice(0, pos)).length; el.value = nv; try { el.setSelectionRange(np, np); } catch (e) {} }
