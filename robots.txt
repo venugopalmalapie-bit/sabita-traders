@@ -17,4 +17,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://venugopalmalapie-bit.github.io/sabita-traders/sitemap.xml
+Sitemap: https://www.sabitatraders.com/sitemap.xml
