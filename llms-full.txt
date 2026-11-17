@@ -1831,8 +1831,8 @@ WhatsApp for help applyingCheck your tractor’s HP band
 ## How much is the Odisha tractor subsidy in 2026?
 The subsidy depends on the tractor’s engine power:
 Tractor power | Subsidy | John Deere models in this band | 
-Up to 48 HP | ₹1,20,000 | 3036EN (35 HP), 5036D (36 HP), 5105 (40 HP), 5039D PowerPro (41 HP), 5042D PowerPro (44 HP), 5045D PowerPro (46 HP) | 
-50 HP and above | ₹1,50,000 | 5050D (50 HP), 5310 (57 HP), 5405 (63 HP), 5075E (76 HP) | 
+Up to 48 HP | ₹1,20,000 | 3036EN (35 HP, 4WD), 5036D (36 HP, 2WD), 5105 (40 HP, 2WD & 4WD), 5039D PowerPro (41 HP, 2WD), 5042D PowerPro (44 HP, 2WD), 5045D PowerPro (46 HP, 2WD & 4WD) | 
+50 HP and above | ₹1,50,000 | 5050D (50 HP, 2WD & 4WD), 5310 (57 HP, 2WD & 4WD), 5405 (63 HP, 2WD & 4WD), 5075E (76 HP, 4WD) | 
 
 Subsidy amounts are set by the Government of Odisha and are paid only after DBT approval. Implements such as rotavators and cultivators have their own subsidy under the same programme.
 
@@ -1847,7 +1847,7 @@ Two rules to know before you apply:
 - Aadhaar linked to your Farmer ID
 - Aadhaar linked to your bank account (the subsidy is paid through the Aadhaar-Based Payment System)
 - Your registered mobile number, for the OTPs at every step
-- For a bank loan: the lender’s usual papers, such as land records, bank statements, PAN and photographs
+- For a bank loan: a CIBIL score above 700, plus the lender’s usual papers, such as land records, bank statements, PAN and photographs
 If your Farmer ID is not linked to Aadhaar, your Block Agriculture Officer can add it.
 
 ## How to apply, step by step
@@ -1881,7 +1881,7 @@ If the permit lapses | Re-apply after 3 months |
 
 ## Can you take the subsidy with a tractor loan?
 Yes. Start the loan file before you book, because the bank must issue the delivery order within the 45-day permit. If the loan is late, the permit can lapse and you would have to wait 3 months to re-apply.
-We work with John Deere Financial, banks and finance companies. Use our EMI calculator to plan the down payment and instalments.
+We work with John Deere Financial, banks and finance companies. For a tractor loan, your CIBIL score should be above 700. Use our EMI calculator to plan the down payment and instalments.
 
 ## What if the farmer dies before delivery?
 From the procedure posted on the FM-DBT portal on 5 Nov 2026: if the farmer paid but died before the online supply was completed, a legal heir can get the subsidy and the machine. The spouse comes first, unless they authorise another heir by notarised affidavit.
@@ -1896,6 +1896,8 @@ Where do I apply for the Odisha tractor subsidy?
 Register once on Go-Sugam, then book the tractor and get the permit on the FM-DBT portal, fmdbt.agriodisha.nic.in. We can guide you through it.
 When is the next tractor booking date in Ganjam?
 New tractor targets are uploaded on 1 Dec and 15 Dec 2026, and on 1 Jan and 15 Jan 2027. Booking reopens at 3 PM on those days.
+What CIBIL score do I need for a tractor loan?
+Your CIBIL score should be above 700. Start the loan file before you book on FM-DBT, so the bank can issue the delivery order within the 45-day permit.
 How long is the subsidy permit valid?
 30 days if you pay yourself and 45 days if you buy with a bank loan. Finish payment and delivery within that time.
 Can I sell the tractor after taking the subsidy?
