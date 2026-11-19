@@ -6,6 +6,15 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-19 – New "Areas we serve" page for all 22 Ganjam blocks (SEO/AEO/GEO/CRO)
+- Approved by: Venu (19 Nov 2026); owner counts, durability figures and tractor suggestions approved
+- Backup branch before change: `backup-2026-11-19-before-areas-page`
+- New: `john-deere-dealer-ganjam-blocks.html`, `or/john-deere-dealer-ganjam-blocks.html` (built from the Aska page frame by a generator script; one data table drives both languages)
+- Content: proof stats (346 tractors, 235 villages, 88% of 10+ yr tractors in service, 4 in 5 choose 4WD), village/block search, 22 block cards by sub-division (owners, soil and crops from KVK Ganjam-I/II, suggested tractor + implement + price, WhatsApp buttons naming the block), 6 FAQs, structured data (dealer areaServed 22 blocks, BreadcrumbList, WebPage, FAQPage)
+- Data sources: John Deere tractor population file (Oct 2023, totals only, no personal data); dealer sales file Jun 2022 – Oct 2026; KVK Ganjam-I report; KVK Ganjam-II block cropping systems; OrissaPOST (district agriculture office) for cotton and paddy procurement
+- Known gap: Sanakhemundi has no KVK crop line (KVK Ganjam-II site blocks downloads)
+- Site-wide: "Areas" / "ଅଞ୍ଚଳ" menu item before Contact on all pages; homepage "All 22 blocks of Ganjam" row; Contact page link; Aska and Bhanjanagar breadcrumbs now point to the new page; sitemap.xml (48 URLs) and llms.txt updated
+
 ## 2026-11-19 – Homepage prices and headings (SEO/AEO)
 - Approved by: Venu (19 Nov 2026)
 - Backup branch before change: `backup-2026-11-19-before-homepage-prices`
