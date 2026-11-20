@@ -6,6 +6,17 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-21 – Analytics tracking upgrade, new titles, 404 page
+- Approved by: Venu (21 Nov 2026), after preview of titles and 404 page
+- Backup branch before change: `backup-2026-11-21-before-analytics`
+- Tracking script (all pages): WhatsApp tag now `[Website: <page> · Ref XXXX]`; events carry page, page_type, lang, placement, wa_ref; new events enquiry_submit, directions_click, review_click, next_step_click, emi_calculate, exchange_check, language_switch, social_click; video_click only for real video links. No name/phone/village sent to GA.
+- Tracking added to About, Privacy, Compare (EN + OR), which had none.
+- Unique data-page names for blog posts, subsidy guide, and Odia Blog/Careers/Areas.
+- Staff flag: open any page once with `?staff=1` (undo with `?staff=0`) → visits sent with traffic_type=internal.
+- Internal home links: `index.html` → `./`.
+- New `404.html` (noindex).
+- Titles: home "John Deere Tractor Showroom in Berhampur, Ganjam"; 10 model pages "… Price in Odisha, Specs | Berhampur" (EN + OR equivalents).
+
 ## 2026-11-21 – Two new blog posts: paddy puddling guide and on-road price explained (SEO/AEO/GEO/CRO)
 - Approved by: Venu (21 Nov 2026), drafts approved in chat, publish approved after preview
 - Backup branch before change: `backup-2026-11-21-before-puddling-onroad-posts`
