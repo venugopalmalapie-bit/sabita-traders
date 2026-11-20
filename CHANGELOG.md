@@ -6,6 +6,17 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-21 – Competitor and AI-search audit: fixes on the site
+- Approved by: Venu (21 Nov 2026). Directory correction emails parked; comparison stays John Deere only; neutral price FAQ approved; no Telugu page for now
+- Backup branch before change: `backup-2026-11-21-before-ai-search-fixes`
+- Home (EN + OR): loan-and-subsidy FAQ corrected (register on Go-Sugam, then book on the FM-DBT portal) in text and schema; new FAQ "Is Sabita Traders the John Deere dealer in Berhampore, West Bengal?" (answer: no, Brahmapur, Ganjam, Odisha)
+- 10 model pages (EN + OR): new FAQ "Why do some websites show a different price for this tractor?" (neutral, no competitor named), text and schema
+- Subsidy guide (EN + OR): FM-DBT portal linked; new "Sources" list (FM-DBT portal, Go-Sugam, Operational Modality 2026 and 2024, Krushak Odisha); visible "Updated 21 Nov 2026"
+- Schema on all pages: one consistent dealer node (same description; areaServed = Berhampur, Aska, Bhanjanagar, Ganjam district + all 22 blocks); contact languages English and Odia; John Deere logo removed from the careers JobPosting
+- Dates: dateModified 2026-11-21 on pages whose content changed today; sitemap lastmod now taken from each page's dateModified or its last git change (was the same date on 52 URLs)
+- llms-full.txt regenerated from the current English pages (27 pages; adds about, blocks, not-eligible; current prices and FAQs)
+- Checks: all JSON-LD parses; no new markup errors; every click replayed, only the new FAQs/sources differ; no script errors
+
 ## 2026-11-21 – Design audit, Wave 2 (next steps, links, Odia readability, consistency)
 - Approved by: Venu (21 Nov 2026)
 - Backup branch before change: `backup-2026-11-21-before-design-wave2`
