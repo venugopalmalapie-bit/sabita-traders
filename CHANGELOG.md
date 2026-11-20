@@ -6,6 +6,15 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-20 – Official John Deere videos near the top of 8 model pages (SEO/AEO/GEO/CRO, stopgap)
+- Approved by: Venu (20 Nov 2026), as a stopgap until our own Odia walkaround videos
+- Backup branch before change: `backup-2026-11-20-before-model-videos`
+- Files: 3036EN, 5036D, 5042D, 5045D, 5050D, 5075E, 5310, 5405 model pages, English and `or/` (16 files)
+- The small video tile in the photo strip is replaced by a large 16:9 video right under the main tractor photo, with a caption (title · John Deere India · length)
+- Click-to-play: YouTube (privacy-enhanced youtube-nocookie.com) loads only when the visitor taps, so page speed is unchanged; the video keeps playing if the visitor switches 2WD/4WD; tap is tracked as `video_play`
+- Structured data: VideoObject per page (title, upload date, length and thumbnail read from the official John Deere India YouTube channel on 20 Nov 2026)
+- To undo: revert this commit; to replace with our own videos later, change the video ID on each page
+
 ## 2026-11-19 – New "Areas we serve" page for all 22 Ganjam blocks (SEO/AEO/GEO/CRO)
 - Approved by: Venu (19 Nov 2026); owner counts, durability figures and tractor suggestions approved
 - Backup branch before change: `backup-2026-11-19-before-areas-page`
