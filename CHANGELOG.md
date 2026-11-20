@@ -6,6 +6,13 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-21 – One delivery figure (340+) and real showroom photo on home
+- Approved by: Venu (21 Nov 2026): "keep it 340+ as consistent"; showroom photo is real; all 11 lender tie-ups confirmed active (logos unchanged)
+- Backup branch before change: `backup-2026-11-21-before-340-showroom-photo`
+- Ganjam blocks page (EN + OR): headline stat, meta description and schema 346 -> 340+; llms.txt and llms-full.txt likewise. Source note (John Deere records, Oct 2023) unchanged
+- Home (EN + OR): real Sabita Traders showroom/workshop photo added to "Visit our Berhampur showroom" (lazy, sized, srcset, no layout shift)
+- Checks: clicks replayed on the 4 changed pages, only difference 346 -> 340+; no script errors
+
 ## 2026-11-21 – Design audit, Wave 1 (enquiries and phone usability)
 - Approved by: Venu (21 Nov 2026)
 - Backup branch before change: `backup-2026-11-21-before-design-wave1`
