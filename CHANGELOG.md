@@ -6,6 +6,15 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-21 – Technical audit, part 2: lighter Odia pages, faster Odia homepage
+- Approved by: Venu (21 Nov 2026)
+- Backup branch before change: `backup-2026-11-21-before-odia-slim`
+- All template pages (48): template indentation removed; Odia pages keep only the translation entries they use (verified: 524 clicks/selects replayed, identical to the live site; no translation lost). Odia pages ~25% smaller (gzipped), e.g. or/index 39.5 KB -> 30.0 KB
+- Homepage (EN + Odia): main photo sized for phones (`sizes="100vw"`), second hero photo marked low priority
+- Odia homepage: main-photo preload now uses the phone-sized versions (it was downloading the photo twice); model cards now get phone-sized images (they had an empty srcset and loaded full-size)
+- Results (Lighthouse mobile, all 60 pages): performance avg 96.3 -> 98.2 (lowest 86 -> 92); accessibility 97.7 -> 98.1; SEO 100. Odia homepage realistic phone test 91 -> 96, main photo 3.4 s -> 2.8 s
+- Look and feel unchanged; no broken links, no script errors
+
 ## 2026-11-20 – New blog post: "Not eligible for the tractor subsidy?" (SEO/AEO/GEO/CRO)
 - Approved by: Venu (20 Nov 2026)
 - Backup branch before change: `backup-2026-11-20-before-not-eligible-post`
