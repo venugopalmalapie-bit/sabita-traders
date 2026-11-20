@@ -17,6 +17,17 @@ Or restore a whole backup: repo → branch menu → pick the `backup-...` branch
 - Site-wide: new card first on the Blog page (EN + Odia) and in the Blog's blogPost list; subsidy guide links to the new post (loan section + Read next, EN; Read next, Odia); sitemap.xml (+2 URLs) and llms.txt updated
 - To undo: revert this commit
 
+## 2026-11-21 – Technical audit fixes (speed, search markup, links, accessibility)
+- Approved by: Venu (21 Nov 2026) – "fix all"; stock status (availability) held back pending his decision; Odia page-weight work (#4) to follow as its own step
+- Backup branch before change: `backup-2026-11-21-before-tech-fixes`
+- Fonts load without blocking the page on all pages; English pages no longer download the full Odia font (only the few Odia letters they show)
+- Phone-sized copies of 20 large photos (480 px and 960 px) with srcset; homepage hero photo fetched first (fetchpriority + matching preload)
+- Measured on a simulated slow phone (Lighthouse, devtools throttling): homepage speed 88 -> 96, main photo 3.9 s -> 2.8 s; Odia homepage 87 -> 92, 4.0 s -> 3.3 s
+- Structured data: dealer map coordinates and price range on every page; 2WD/4WD product variants now carry an image; blog listing posts carry an image
+- Links: 8 John Deere implement links (moved by John Deere) now point to John Deere's implements page, labelled "John Deere implement range"; Power & Technology 6.0 card points to John Deere India's YouTube channel
+- Accessibility: yellow-on-green labels now white (contrast); logo link label matches its visible text
+- Titles shortened on 6 pages and meta descriptions on 8 pages so Google does not cut them off
+
 ## 2026-11-21 – New About page
 - Approved by: Venu (21 Nov 2026), copy and phone/desktop previews
 - Backup branch before change: `backup-2026-11-21-before-about`
