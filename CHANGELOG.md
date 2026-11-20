@@ -6,6 +6,11 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-21 – Review helper: keyboard-mic tip removed
+- Approved by: Venu (21 Nov 2026) – keyboard voice typing was not working well; removed to avoid frustration
+- Backup branch before change: `backup-2026-11-21-before-remove-mic-tip`
+- `review/index.html`: step 4 is now only the optional text box (typing). No voice features remain.
+
 ## 2026-11-21 – Review helper: Speak button removed, keyboard-mic tip instead
 - Approved by: Venu (21 Nov 2026)
 - Backup branch before change: `backup-2026-11-21-before-remove-speak`

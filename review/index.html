@@ -53,8 +53,6 @@ main{padding:16px;display:flex;flex-direction:column;gap:16px;flex:1}
 .empty-note{font-size:14px;color:var(--muted);background:var(--muted-bg);border-radius:6px;padding:10px}
 textarea{width:100%;min-height:120px;border:1px solid var(--border);border-radius:6px;padding:12px;font:16px/1.6 inherit;font-family:inherit;color:var(--ink);resize:vertical}
 textarea:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--green);outline-offset:2px}
-.mic{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);background:var(--muted-bg);border-radius:6px;padding:10px}
-.mic svg{flex:none;margin-top:2px}
 #review{min-height:170px;background:#FFFEF5}
 @keyframes pulse{50%{opacity:.35}}
 .live{font-size:14px;color:var(--muted);font-style:italic;min-height:0}
@@ -151,7 +149,6 @@ footer a{color:#fff}
       <p class="hint" data-t="s3hint"></p>
 
       <textarea id="words" autocomplete="off"></textarea>
-      <div class="mic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg><span data-t="mic"></span></div>
     </section>
 
     <section class="card" aria-labelledby="h4">
@@ -203,7 +200,6 @@ footer a{color:#fff}
       s2: "3 · Tell us more (optional)", s2hint: "Answer only what you want. Skip the rest.",
       s3: "4 · In your own words (optional)",
       s3hint: "Anything you want to say – good or bad. Your words are added exactly as you write them.",
-      mic: "Prefer to speak? Tap the microphone on your phone keyboard and talk – your words appear in the box.",
       s4: "5 · Your review",
       s4hint: "Read it. You can change anything – it is your review.",
       edited: "You changed the review by hand.", rebuild: "Rebuild from my answers",
@@ -243,7 +239,6 @@ footer a{color:#fff}
       s2: "୩ · ଆହୁରି କୁହନ୍ତୁ (ଇଚ୍ଛାଧୀନ)", s2hint: "ଯାହା ଚାହିଁବେ କେବଳ ସେତିକି ଉତ୍ତର ଦିଅନ୍ତୁ। ବାକି ଛାଡ଼ିଦିଅନ୍ତୁ।",
       s3: "୪ · ନିଜ ଭାଷାରେ (ଇଚ୍ଛାଧୀନ)",
       s3hint: "ଭଲ କି ଖରାପ – ଯାହା କହିବାକୁ ଚାହାଁନ୍ତି ଲେଖନ୍ତୁ। ଆପଣଙ୍କ କଥା ଠିକ୍ ଯେମିତି ଲେଖିବେ ସେମିତି ଯୋଡ଼ାଯିବ।",
-      mic: "କହିବାକୁ ଚାହାଁନ୍ତି? ଫୋନ୍ କିବୋର୍ଡର ମାଇକ୍ ଟାପ୍ କରି କୁହନ୍ତୁ – ଆପଣଙ୍କ କଥା ବାକ୍ସରେ ଲେଖା ହୋଇଯିବ।",
       s4: "୫ · ଆପଣଙ୍କ ରିଭ୍ୟୁ",
       s4hint: "ପଢ଼ନ୍ତୁ। ଯାହା ଚାହିଁବେ ବଦଳାଇପାରିବେ – ଏହା ଆପଣଙ୍କ ରିଭ୍ୟୁ।",
       edited: "ଆପଣ ରିଭ୍ୟୁକୁ ହାତରେ ବଦଳାଇଛନ୍ତି।", rebuild: "ମୋ ଉତ୍ତରରୁ ପୁଣି ତିଆରି କରନ୍ତୁ",
@@ -283,7 +278,6 @@ footer a{color:#fff}
       s2: "3 · ఇంకా చెప్పండి (ఐచ్ఛికం)", s2hint: "మీకు కావలసినవి మాత్రమే జవాబు ఇవ్వండి. మిగతావి వదిలేయండి.",
       s3: "4 · మీ మాటల్లో (ఐచ్ఛికం)",
       s3hint: "మంచిదైనా చెడ్డదైనా – మీరు చెప్పాలనుకున్నది రాయండి. మీరు రాసినట్టే మీ మాటలు జోడించబడతాయి.",
-      mic: "మాట్లాడాలనుకుంటున్నారా? ఫోన్ కీబోర్డ్‌లోని మైక్ నొక్కి మాట్లాడండి – మీ మాటలు బాక్స్‌లో వస్తాయి.",
       s4: "5 · మీ రివ్యూ", s4hint: "చదవండి. ఏదైనా మార్చవచ్చు – ఇది మీ రివ్యూ.",
       edited: "మీరు రివ్యూను స్వయంగా మార్చారు.", rebuild: "నా జవాబుల నుండి మళ్ళీ తయారు చేయండి",
       copy: "రివ్యూ కాపీ చేయండి", copied: "కాపీ అయింది. ఇప్పుడు “Googleలో పోస్ట్ చేయండి” నొక్కండి.",
@@ -322,7 +316,6 @@ footer a{color:#fff}
       s2: "3 · और बताइए (वैकल्पिक)", s2hint: "जितना चाहें उतना जवाब दें। बाकी छोड़ दें।",
       s3: "4 · अपने शब्दों में (वैकल्पिक)",
       s3hint: "अच्छा या बुरा – जो कहना चाहें लिखिए। आपके शब्द जैसे लिखेंगे वैसे ही जोड़े जाएंगे।",
-      mic: "बोलना चाहते हैं? फोन कीबोर्ड का माइक दबाकर बोलिए – आपके शब्द बॉक्स में आ जाएंगे।",
       s4: "5 · आपका रिव्यू", s4hint: "पढ़िए। जो चाहें बदल सकते हैं – यह आपका रिव्यू है।",
       edited: "आपने रिव्यू खुद बदला है।", rebuild: "मेरे जवाबों से फिर बनाएं",
       copy: "रिव्यू कॉपी करें", copied: "कॉपी हो गया। अब “Google पर पोस्ट करें” दबाएं।",
