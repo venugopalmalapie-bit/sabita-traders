@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#27251F">
+<title>Write a review | Sabita Traders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Noto+Sans:wght@400;600;700&family=Noto+Sans+Oriya:wght@400;600;700&family=Noto+Sans+Telugu:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#367C2B;--yellow:#FFDE00;--ink:#27251F;--deep:#1E6B1E;--muted-bg:#F4F5F0;--muted:#5C5A52;--border:#D9DACF;--wa:#177A42;--error:#B42318;--tint:#EAF2E7;--warn-bg:#FDECEA;
+  --sans:"Noto Sans",Arial,sans-serif;--odia:"Noto Sans Oriya","Noto Sans",Arial,sans-serif;--telugu:"Noto Sans Telugu","Noto Sans",Arial,sans-serif;--deva:"Noto Sans Devanagari","Noto Sans",Arial,sans-serif;--display:Oswald,"Roboto Condensed",Arial,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--muted-bg);color:var(--ink);font:16px/1.5 var(--sans)}
+body.or{font-family:var(--odia)} body.te{font-family:var(--telugu)} body.hi{font-family:var(--deva)}
+body.or .card h2,body.or .hero h1{font-family:var(--odia);font-weight:700}
+body.te .card h2,body.te .hero h1{font-family:var(--telugu);font-weight:700}
+body.hi .card h2,body.hi .hero h1{font-family:var(--deva);font-weight:700}
+.langbar{display:grid;grid-template-columns:repeat(4,1fr);background:#3A3832;border-bottom:1px solid #5C5A52}
+.langbar button{min-height:48px;border:0;border-right:1px solid #5C5A52;background:transparent;color:#fff;font:600 16px/1.2 var(--sans);cursor:pointer}
+.langbar button:last-child{border-right:0}
+.langbar button[aria-pressed="true"]{background:var(--yellow);color:var(--ink)}
+.langbar .l-or{font-family:var(--odia)} .langbar .l-te{font-family:var(--telugu)} .langbar .l-hi{font-family:var(--deva)}
+.wrap{max-width:620px;margin:0 auto;min-height:100vh;background:var(--muted-bg);display:flex;flex-direction:column}
+header{background:var(--ink);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font:700 22px/26px var(--display)}
+.sub{font-size:13px;color:#D9DACF}
+.lang{display:flex;border:1px solid #5C5A52;border-radius:6px;overflow:hidden;flex:none}
+.lang button{height:44px;min-width:56px;padding:0 10px;border:0;background:transparent;color:#fff;font:600 15px var(--sans);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--yellow);color:var(--ink)}
+.lang button.or{font-family:var(--odia)}
+.rule{height:4px;background:var(--yellow)}
+main{padding:16px;display:flex;flex-direction:column;gap:16px;flex:1}
+.hero h1{margin:0 0 4px;font:700 24px/1.3 var(--display)}
+.hero p{margin:0;color:var(--muted);font-size:15px}
+.card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.card h2{margin:0;font:600 19px/1.35 var(--display)}
+.hint{margin:0;font-size:14px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:48px;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:#fff;color:var(--ink);font:600 15px/1.3 inherit;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip[aria-pressed="true"]{border:2px solid var(--green);background:var(--tint);color:var(--deep)}
+.chip[aria-pressed="true"]::before{content:"✓";font-weight:700}
+.aspect{border-top:1px solid var(--border);padding-top:12px;display:flex;flex-direction:column;gap:8px}
+.aspect:first-of-type{border-top:0;padding-top:0}
+.aspect .q{font-weight:600;font-size:15px}
+.rate{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.rate button{min-height:48px;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--ink);font:600 15px/1.2 inherit;font-family:inherit;cursor:pointer;padding:6px}
+.rate button[aria-pressed="true"][data-v="good"]{border:2px solid var(--green);background:var(--tint);color:var(--deep)}
+.rate button[aria-pressed="true"][data-v="ok"]{border:2px solid #8A6D00;background:#FFF7CC;color:#5A4700}
+.rate button[aria-pressed="true"][data-v="bad"]{border:2px solid var(--error);background:var(--warn-bg);color:var(--error)}
+.empty-note{font-size:14px;color:var(--muted);background:var(--muted-bg);border-radius:6px;padding:10px}
+textarea{width:100%;min-height:120px;border:1px solid var(--border);border-radius:6px;padding:12px;font:16px/1.6 inherit;font-family:inherit;color:var(--ink);resize:vertical}
+textarea:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.mic{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);background:var(--muted-bg);border-radius:6px;padding:10px}
+.mic svg{flex:none;margin-top:2px}
+#review{min-height:170px;background:#FFFEF5}
+.microw{display:flex;flex-direction:column;gap:8px}
+#mic[aria-pressed="true"]{background:var(--error);border-color:var(--error);color:#fff}
+#mic[aria-pressed="true"] svg{animation:pulse 1s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.live{font-size:14px;color:var(--muted);font-style:italic;min-height:0}
+.live:empty{display:none}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.small{font-size:13px;color:var(--muted)}
+.btn{min-height:52px;border-radius:8px;font:700 17px/1.2 inherit;font-family:inherit;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;padding:10px 16px;text-align:center}
+.btn-yellow{border:0;background:var(--yellow);color:var(--ink)}
+.btn-green{border:0;background:var(--green);color:#fff}
+.btn-outline{border:1px solid var(--green);background:#fff;color:var(--green)}
+.btn-plain{border:1px solid var(--border);background:#fff;color:var(--ink);font-size:15px;min-height:44px}
+.btn[aria-disabled="true"]{opacity:.5}
+.steps{margin:0;padding-left:20px;font-size:15px;display:flex;flex-direction:column;gap:4px}
+.help{background:var(--warn-bg);border:1px solid #F3C1BB;border-radius:8px;padding:14px;font-size:15px;display:flex;flex-direction:column;gap:6px}
+.help b{font-size:17px}
+.help a{color:var(--error);font-weight:700}
+.status{font-size:14px;font-weight:600;color:var(--deep);min-height:20px}
+.status.err{color:var(--error)}
+footer{background:var(--deep);color:#fff;padding:14px 16px;font-size:13px;line-height:1.5}
+footer a{color:#fff}
+.faces{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.face{min-height:100px;border:1px solid var(--border);border-radius:12px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font:700 16px/1.2 inherit;font-family:inherit;color:var(--ink);cursor:pointer;padding:8px 4px}
+.face[aria-pressed="true"][data-v="good"]{border:2px solid var(--green);background:var(--tint);color:var(--deep)}
+.face[aria-pressed="true"][data-v="ok"]{border:2px solid #8A6D00;background:#FFF7CC;color:#5A4700}
+.face[aria-pressed="true"][data-v="bad"]{border:2px solid var(--error);background:var(--warn-bg);color:var(--error)}
+.jump{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;background:var(--tint);border-radius:8px;padding:10px 12px;font-size:15px;font-weight:600;color:var(--deep)}
+.jump a{color:var(--deep)}
+.btn-speak{min-height:68px;border:2px solid var(--green);background:#fff;color:var(--green);font-size:19px;border-radius:12px}
+.btn-big{min-height:62px;font-size:19px;border-radius:12px}
+.link{background:none;border:0;padding:10px 0;color:var(--green);font:600 15px/1.2 inherit;font-family:inherit;text-decoration:underline;cursor:pointer;align-self:center;min-height:44px}
+/* ---- desktop: questions left, live review right (sticky) ---- */
+@media (min-width:960px){
+  html,body{background:#E7E8E1}
+  .wrap{max-width:1180px;box-shadow:0 0 0 1px var(--border)}
+  main{display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:20px 28px;align-items:start;padding:24px}
+  main>.hero{grid-column:1/-1}
+  main>section.card:not([aria-labelledby="h4"]){grid-column:1}
+  main>section[aria-labelledby="h4"]{grid-column:2;grid-row:2/span 4;position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto}
+  main>#help{grid-column:2}
+  main>#reset{grid-column:1;justify-self:start;min-width:220px}
+  #jump{display:none!important}
+  .faces .face{min-height:110px}
+}
+.langbar.lang{display:grid;border:0;border-radius:0;overflow:visible}
+[hidden]{display:none!important}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B5JR51T46D"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());var st=0;try{if(/[?&]staff=1/.test(location.search))localStorage.setItem('st_staff','1');if(/[?&]staff=0/.test(location.search))localStorage.removeItem('st_staff');st=localStorage.getItem('st_staff')==='1';}catch(e){}gtag("config","G-B5JR51T46D",st?{traffic_type:"internal"}:{});</script>
+</head>
+<body class="or">
+<div class="wrap">
+  <header>
+    <div>
+      <div class="brand">Sabita Traders</div>
+      <div class="sub" data-t="tagline"></div>
+    </div>
+
+  </header>
+  <div class="langbar lang" role="group" aria-label="Language">
+    <button type="button" class="l-or" data-lang="or" aria-pressed="true">ଓଡ଼ିଆ</button>
+    <button type="button" class="l-en" data-lang="en" aria-pressed="false">English</button>
+    <button type="button" class="l-te" data-lang="te" aria-pressed="false">తెలుగు</button>
+    <button type="button" class="l-hi" data-lang="hi" aria-pressed="false">हिंदी</button>
+  </div>
+  <div class="rule"></div>
+
+  <main>
+    <div class="hero">
+      <h1 data-t="title"></h1>
+      <p data-t="intro"></p>
+    </div>
+
+    <section class="card overall" aria-labelledby="h0">
+      <h2 id="h0" data-t="s0"></h2>
+      <div class="faces" id="faces" role="group" aria-labelledby="h0"></div>
+      <div class="jump" id="jump" hidden>
+        <span data-t="ready"></span>
+        <a href="#h4" id="jump-link" data-t="jumpLink"></a>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="h1">
+      <h2 id="h1" data-t="s1"></h2>
+      <p class="hint" data-t="s1hint"></p>
+      <div class="chips" id="what"></div>
+    </section>
+
+    <section class="card" aria-labelledby="h2">
+      <h2 id="h2" data-t="s2"></h2>
+      <p class="hint" data-t="s2hint"></p>
+      <div id="aspects"></div>
+    </section>
+
+    <section class="card" aria-labelledby="h3">
+      <h2 id="h3"><label for="words" data-t="s3"></label></h2>
+      <p class="hint" data-t="s3hint"></p>
+      <div class="microw">
+        <button type="button" class="btn btn-speak" id="mic" aria-pressed="false">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg>
+          <span id="mic-label"></span>
+        </button>
+        <div class="live" id="live" aria-live="polite"></div>
+      </div>
+      <textarea id="words" autocomplete="off"></textarea>
+      <div class="mic"><span data-t="mic"></span></div>
+    </section>
+
+    <section class="card" aria-labelledby="h4">
+      <h2 id="h4"><label for="review" data-t="s4"></label></h2>
+      <p class="hint" data-t="s4hint"></p>
+      <textarea id="review" autocomplete="off"></textarea>
+      <div class="row">
+        <span class="small" id="edited-note" hidden data-t="edited"></span>
+        <button type="button" class="btn btn-plain" id="rebuild" hidden data-t="rebuild"></button>
+      </div>
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+      <a class="btn btn-yellow btn-big" id="post" href="https://g.page/r/CRGbNg2CJymWEBM/review" target="_blank" rel="noopener" data-t="copyPost"></a>
+      <button type="button" class="link" id="copy" data-t="copyOnly"></button>
+      <ol class="steps">
+        <li data-t="step1"></li>
+        <li data-t="step2"></li>
+        <li data-t="step3"></li>
+      </ol>
+    </section>
+
+    <section class="help" id="help" hidden>
+      <b data-t="helpTitle"></b>
+      <span data-t="helpBody"></span>
+      <span><a href="tel:+918908589085">📞 89085 89085</a> · <a href="https://wa.me/918908589085" target="_blank" rel="noopener">WhatsApp 89085 89085</a></span>
+    </section>
+
+    <button type="button" class="btn btn-plain" id="reset" data-t="reset"></button>
+  </main>
+
+  <footer>
+    <div data-t="foot1"></div>
+    <div data-t="foot2"></div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  /* All Odia text is a DRAFT for review by a native reader. */
+  var T = {
+    en: {
+      tagline: "Authorised John Deere tractor dealer · Berhampur",
+      title: "Share your experience",
+      intro: "Tap a few answers and add your own words if you like. We put them together into a review that you can change, copy and post on Google yourself.",
+      s0: "1 · How was your experience?",
+      ready: "Your review is ready. Add more below, or",
+      jumpLink: "go to your review ↓",
+      s1: "2 · What did you get from us? (optional)", s1hint: "Tap all that apply.",
+      s2: "3 · Tell us more (optional)", s2hint: "Answer only what you want. Skip the rest.",
+      s3: "4 · In your own words (optional)",
+      s3hint: "Anything you want to say – good or bad. Your words are added exactly as you write them.",
+      mic: "Tap Speak and talk; tap Stop when done. If it does not work on your phone, tap the microphone on your phone keyboard instead.",
+      speak: "Speak", stop: "Stop", listening: "Listening… speak now",
+      micNone: "Voice is not available in this browser. Use the microphone on your phone keyboard.",
+      micDenied: "Microphone permission was not given. Allow it in the browser, or use the keyboard microphone.",
+      micLang: "Voice typing is not available for this language here. Use the microphone on your phone keyboard.",
+      micErr: "Could not hear you. Try again, or use the keyboard microphone.",
+      s4: "5 · Your review",
+      s4hint: "Read it. You can change anything – it is your review.",
+      edited: "You changed the review by hand.", rebuild: "Rebuild from my answers",
+      copy: "Copy review", copied: "Copied. Now tap “Open Google to post”.",
+      copyFail: "Could not copy automatically. Press and hold in the review box, Select all, then Copy.",
+      emptyReview: "Tap at least one answer or write a few words first.",
+      post: "Open Google to post ↗",
+      copyPost: "Copy & post on Google ↗", copyOnly: "Copy only",
+      copiedPost: "Copied. On the Google page: choose stars, Paste, Post.",
+      step1: "On the Google page, choose your stars.",
+      step2: "Press and hold in the text box, then Paste.",
+      step3: "Press Post.",
+      helpTitle: "Sorry something was not good.",
+      helpBody: "Please post your honest review. If you also want us to fix the problem, call or WhatsApp our team:",
+      reset: "Start again",
+      foot1: "Your review is yours. Sabita Traders does not offer any reward for reviews, good or bad.",
+      foot2: "Your review text is not saved or sent to us. We only count visits to this page.",
+      good: "Good", ok: "OK", bad: "Not good", wordsPh: "e.g. what you liked, what went wrong…",
+      noAspects: "Tap an answer in step 1 or 2 to see these questions.",
+      overallOnly: { good: "My experience at Sabita Traders was good.", ok: "My experience at Sabita Traders was okay.", bad: "My experience at Sabita Traders was not good." },
+      what: { tractor: "New tractor", implement: "Implement", parts: "Spare parts", service: "Tractor service / repair", loan: "Loan help", subsidy: "Subsidy help" },
+      aspects: {
+        overall: "Overall experience", staff: "Staff behaviour", explain: "Explanation of price and features",
+        delivery: "Delivery time", paperwork: "Help with paperwork", servicework: "Quality of service work",
+        servicetime: "Time taken for service", partsavail: "Availability of spare parts"
+      },
+      rated: { good: "was good.", ok: "was okay.", bad: "was not good." }
+    },
+    or: {
+      tagline: "ଜନ୍ ଡିୟର ଟ୍ରାକ୍ଟରର ଅଧିକୃତ ଡିଲର · ବ୍ରହ୍ମପୁର",
+      title: "ଆପଣଙ୍କ ଅନୁଭୂତି ଜଣାନ୍ତୁ",
+      intro: "କିଛି ଉତ୍ତର ଟାପ୍ କରନ୍ତୁ ଓ ଚାହିଁଲେ ନିଜ କଥା ଲେଖନ୍ତୁ। ଆମେ ସେଗୁଡ଼ିକୁ ଏକାଠି କରି ଏକ ରିଭ୍ୟୁ ତିଆରି କରିବୁ, ଯାହାକୁ ଆପଣ ବଦଳାଇ, କପି କରି ନିଜେ Googleରେ ପୋଷ୍ଟ କରିପାରିବେ।",
+      s0: "୧ · ଆପଣଙ୍କ ଅନୁଭୂତି କେମିତି ଥିଲା?",
+      ready: "ଆପଣଙ୍କ ରିଭ୍ୟୁ ତିଆରି। ତଳେ ଆହୁରି ଯୋଡ଼ନ୍ତୁ, କିମ୍ବା",
+      jumpLink: "ରିଭ୍ୟୁକୁ ଯାଆନ୍ତୁ ↓",
+      s1: "୨ · ଆପଣ ଆମଠାରୁ କ'ଣ ନେଲେ? (ଇଚ୍ଛାଧୀନ)", s1hint: "ଯେତେ ଲାଗୁ ହୁଏ ସବୁ ଟାପ୍ କରନ୍ତୁ।",
+      s2: "୩ · ଆହୁରି କୁହନ୍ତୁ (ଇଚ୍ଛାଧୀନ)", s2hint: "ଯାହା ଚାହିଁବେ କେବଳ ସେତିକି ଉତ୍ତର ଦିଅନ୍ତୁ। ବାକି ଛାଡ଼ିଦିଅନ୍ତୁ।",
+      s3: "୪ · ନିଜ ଭାଷାରେ (ଇଚ୍ଛାଧୀନ)",
+      s3hint: "ଭଲ କି ଖରାପ – ଯାହା କହିବାକୁ ଚାହାଁନ୍ତି ଲେଖନ୍ତୁ। ଆପଣଙ୍କ କଥା ଠିକ୍ ଯେମିତି ଲେଖିବେ ସେମିତି ଯୋଡ଼ାଯିବ।",
+      mic: "କହନ୍ତୁ ଟାପ୍ କରି କଥା କୁହନ୍ତୁ; ଶେଷ ହେଲେ ବନ୍ଦ ଟାପ୍ କରନ୍ତୁ। ଆପଣଙ୍କ ଫୋନରେ ନ ଚାଲିଲେ, ଫୋନ୍ କିବୋର୍ଡର ମାଇକ୍ ଟାପ୍ କରନ୍ତୁ।",
+      speak: "କହନ୍ତୁ", stop: "ବନ୍ଦ କରନ୍ତୁ", listening: "ଶୁଣୁଛି… ଏବେ କୁହନ୍ତୁ",
+      micNone: "ଏହି ବ୍ରାଉଜରରେ ଭଏସ୍ ଉପଲବ୍ଧ ନାହିଁ। ଫୋନ୍ କିବୋର୍ଡର ମାଇକ୍ ବ୍ୟବହାର କରନ୍ତୁ।",
+      micDenied: "ମାଇକ୍ ଅନୁମତି ମିଳିଲା ନାହିଁ। ବ୍ରାଉଜରରେ ଅନୁମତି ଦିଅନ୍ତୁ, କିମ୍ବା କିବୋର୍ଡ ମାଇକ୍ ବ୍ୟବହାର କରନ୍ତୁ।",
+      micLang: "ଏଠାରେ ଏହି ଭାଷାରେ ଭଏସ୍ ଟାଇପିଂ ଉପଲବ୍ଧ ନାହିଁ। ଫୋନ୍ କିବୋର୍ଡର ମାଇକ୍ ବ୍ୟବହାର କରନ୍ତୁ।",
+      micErr: "ଶୁଣିପାରିଲି ନାହିଁ। ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ, କିମ୍ବା କିବୋର୍ଡ ମାଇକ୍ ବ୍ୟବହାର କରନ୍ତୁ।",
+      s4: "୫ · ଆପଣଙ୍କ ରିଭ୍ୟୁ",
+      s4hint: "ପଢ଼ନ୍ତୁ। ଯାହା ଚାହିଁବେ ବଦଳାଇପାରିବେ – ଏହା ଆପଣଙ୍କ ରିଭ୍ୟୁ।",
+      edited: "ଆପଣ ରିଭ୍ୟୁକୁ ହାତରେ ବଦଳାଇଛନ୍ତି।", rebuild: "ମୋ ଉତ୍ତରରୁ ପୁଣି ତିଆରି କରନ୍ତୁ",
+      copy: "ରିଭ୍ୟୁ କପି କରନ୍ତୁ", copied: "କପି ହୋଇଗଲା। ଏବେ “Googleରେ ପୋଷ୍ଟ କରନ୍ତୁ” ଟାପ୍ କରନ୍ତୁ।",
+      copyFail: "ଆପେ ଆପେ କପି ହେଲା ନାହିଁ। ରିଭ୍ୟୁ ବାକ୍ସରେ ଦବାଇ ଧରନ୍ତୁ, Select all, ତା'ପରେ Copy କରନ୍ତୁ।",
+      emptyReview: "ପ୍ରଥମେ ଅତି କମରେ ଗୋଟିଏ ଉତ୍ତର ଟାପ୍ କରନ୍ତୁ କିମ୍ବା କିଛି ଲେଖନ୍ତୁ।",
+      post: "Googleରେ ପୋଷ୍ଟ କରନ୍ତୁ ↗",
+      copyPost: "କପି କରି Googleରେ ପୋଷ୍ଟ କରନ୍ତୁ ↗", copyOnly: "କେବଳ କପି କରନ୍ତୁ",
+      copiedPost: "କପି ହୋଇଗଲା। Google ପୃଷ୍ଠାରେ: ଷ୍ଟାର୍ ବାଛନ୍ତୁ, Paste କରନ୍ତୁ, Post ଦବାନ୍ତୁ।",
+      step1: "Google ପୃଷ୍ଠାରେ ଆପଣଙ୍କ ଷ୍ଟାର୍ ବାଛନ୍ତୁ।",
+      step2: "ଲେଖା ବାକ୍ସରେ ଦବାଇ ଧରି Paste କରନ୍ତୁ।",
+      step3: "Post ଦବାନ୍ତୁ।",
+      helpTitle: "କିଛି ଭଲ ନଥିବାରୁ ଆମେ ଦୁଃଖିତ।",
+      helpBody: "ଦୟାକରି ଆପଣଙ୍କ ସଚ୍ଚା ରିଭ୍ୟୁ ପୋଷ୍ଟ କରନ୍ତୁ। ସମସ୍ୟା ସମାଧାନ ପାଇଁ ଆମ ଟିମକୁ କଲ୍ କିମ୍ବା WhatsApp କରନ୍ତୁ:",
+      reset: "ପୁଣି ଆରମ୍ଭ କରନ୍ତୁ",
+      foot1: "ଆପଣଙ୍କ ରିଭ୍ୟୁ ଆପଣଙ୍କର। ଭଲ କି ଖରାପ ରିଭ୍ୟୁ ପାଇଁ ସବିତା ଟ୍ରେଡର୍ସ କୌଣସି ପୁରସ୍କାର ଦିଏ ନାହିଁ।",
+      foot2: "ଆପଣଙ୍କ ରିଭ୍ୟୁ ଲେଖା ସେଭ୍ ହୁଏ ନାହିଁ କି ଆମକୁ ପଠାଯାଏ ନାହିଁ। ଆମେ କେବଳ ଏହି ପୃଷ୍ଠାର ଭିଜିଟ୍ ଗଣନା କରୁ।",
+      good: "ଭଲ", ok: "ଠିକ୍ ଅଛି", bad: "ଭଲ ନୁହେଁ", wordsPh: "ଯେପରି: କ'ଣ ଭଲ ଲାଗିଲା, କ'ଣ ଭୁଲ ହେଲା…",
+      noAspects: "ଏହି ପ୍ରଶ୍ନ ଦେଖିବାକୁ ୧ମ କିମ୍ବା ୨ୟ ଧାପରେ ଉତ୍ତର ଟାପ୍ କରନ୍ତୁ।",
+      overallOnly: { good: "ସବିତା ଟ୍ରେଡର୍ସରେ ମୋର ଅନୁଭୂତି ଭଲ ଥିଲା।", ok: "ସବିତା ଟ୍ରେଡର୍ସରେ ମୋର ଅନୁଭୂତି ଠିକ୍ ଥିଲା।", bad: "ସବିତା ଟ୍ରେଡର୍ସରେ ମୋର ଅନୁଭୂତି ଭଲ ନଥିଲା।" },
+      what: { tractor: "ନୂଆ ଟ୍ରାକ୍ଟର", implement: "ଯନ୍ତ୍ରପାତି", parts: "ସ୍ପେୟାର ପାର୍ଟସ", service: "ଟ୍ରାକ୍ଟର ସର୍ଭିସ / ମରାମତି", loan: "ଲୋନ୍ ସହାୟତା", subsidy: "ସବସିଡି ସହାୟତା" },
+      aspects: {
+        overall: "ସମୁଦାୟ ଅନୁଭୂତି", staff: "କର୍ମଚାରୀଙ୍କ ବ୍ୟବହାର", explain: "ମୂଲ୍ୟ ଓ ବିଶେଷତା ବୁଝାଇବା",
+        delivery: "ଡେଲିଭରି ସମୟ", paperwork: "କାଗଜପତ୍ରରେ ସହାୟତା", servicework: "ସର୍ଭିସ କାମର ମାନ",
+        servicetime: "ସର୍ଭିସରେ ଲାଗିଥିବା ସମୟ", partsavail: "ସ୍ପେୟାର ପାର୍ଟସର ଉପଲବ୍ଧତା"
+      },
+      rated: { good: "ଭଲ ଥିଲା।", ok: "ଠିକ୍ ଥିଲା।", bad: "ଭଲ ନଥିଲା।" }
+    },
+    te: {
+      tagline: "జాన్ డీర్ ట్రాక్టర్ల అధీకృత డీలర్ · బ్రహ్మపూర్",
+      title: "మీ అనుభవాన్ని పంచుకోండి",
+      intro: "కొన్ని జవాబులు ఎంచుకోండి, కావాలంటే మీ మాటల్లో రాయండి. వాటిని కలిపి ఒక రివ్యూ తయారు చేస్తాం – దాన్ని మీరు మార్చి, కాపీ చేసి, మీరే Googleలో పోస్ట్ చేయవచ్చు.",
+      s0: "1 · మీ అనుభవం ఎలా ఉంది?",
+      ready: "మీ రివ్యూ సిద్ధంగా ఉంది. కింద ఇంకా జోడించండి, లేదా",
+      jumpLink: "రివ్యూకు వెళ్ళండి ↓",
+      s1: "2 · మీరు మా దగ్గర ఏమి తీసుకున్నారు? (ఐచ్ఛికం)", s1hint: "వర్తించేవన్నీ ఎంచుకోండి.",
+      s2: "3 · ఇంకా చెప్పండి (ఐచ్ఛికం)", s2hint: "మీకు కావలసినవి మాత్రమే జవాబు ఇవ్వండి. మిగతావి వదిలేయండి.",
+      s3: "4 · మీ మాటల్లో (ఐచ్ఛికం)",
+      s3hint: "మంచిదైనా చెడ్డదైనా – మీరు చెప్పాలనుకున్నది రాయండి. మీరు రాసినట్టే మీ మాటలు జోడించబడతాయి.",
+      mic: "మాట్లాడండి నొక్కి మాట్లాడండి; అయిపోయాక ఆపండి నొక్కండి. మీ ఫోన్‌లో పని చేయకపోతే, ఫోన్ కీబోర్డ్‌లోని మైక్ నొక్కండి.",
+      speak: "మాట్లాడండి", stop: "ఆపండి", listening: "వింటున్నాను… ఇప్పుడు మాట్లాడండి",
+      micNone: "ఈ బ్రౌజర్‌లో వాయిస్ అందుబాటులో లేదు. ఫోన్ కీబోర్డ్ మైక్ ఉపయోగించండి.",
+      micDenied: "మైక్ అనుమతి ఇవ్వలేదు. బ్రౌజర్‌లో అనుమతి ఇవ్వండి, లేదా కీబోర్డ్ మైక్ ఉపయోగించండి.",
+      micLang: "ఇక్కడ ఈ భాషలో వాయిస్ టైపింగ్ అందుబాటులో లేదు. ఫోన్ కీబోర్డ్ మైక్ ఉపయోగించండి.",
+      micErr: "వినిపించలేదు. మళ్ళీ ప్రయత్నించండి, లేదా కీబోర్డ్ మైక్ ఉపయోగించండి.",
+      s4: "5 · మీ రివ్యూ", s4hint: "చదవండి. ఏదైనా మార్చవచ్చు – ఇది మీ రివ్యూ.",
+      edited: "మీరు రివ్యూను స్వయంగా మార్చారు.", rebuild: "నా జవాబుల నుండి మళ్ళీ తయారు చేయండి",
+      copy: "రివ్యూ కాపీ చేయండి", copied: "కాపీ అయింది. ఇప్పుడు “Googleలో పోస్ట్ చేయండి” నొక్కండి.",
+      copyFail: "ఆటోమేటిక్‌గా కాపీ కాలేదు. రివ్యూ బాక్స్‌లో నొక్కి పట్టుకోండి, Select all, తర్వాత Copy చేయండి.",
+      emptyReview: "ముందుగా కనీసం ఒక జవాబు ఎంచుకోండి లేదా కొన్ని మాటలు రాయండి.",
+      post: "Googleలో పోస్ట్ చేయండి ↗",
+      copyPost: "కాపీ చేసి Googleలో పోస్ట్ చేయండి ↗", copyOnly: "కాపీ మాత్రమే",
+      copiedPost: "కాపీ అయింది. Google పేజీలో: స్టార్లు ఎంచుకోండి, Paste చేయండి, Post నొక్కండి.",
+      step1: "Google పేజీలో మీ స్టార్లు ఎంచుకోండి.",
+      step2: "టెక్స్ట్ బాక్స్‌లో నొక్కి పట్టుకుని Paste చేయండి.",
+      step3: "Post నొక్కండి.",
+      helpTitle: "క్షమించండి, ఏదో సరిగ్గా లేదు.",
+      helpBody: "దయచేసి మీ నిజాయితీ రివ్యూ పోస్ట్ చేయండి. సమస్య పరిష్కారం కోసం మా టీమ్‌కు కాల్ లేదా WhatsApp చేయండి:",
+      reset: "మళ్ళీ మొదలుపెట్టండి",
+      foot1: "మీ రివ్యూ మీది. మంచి లేదా చెడు రివ్యూకు సబితా ట్రేడర్స్ ఎలాంటి బహుమతి ఇవ్వదు.",
+      foot2: "మీ రివ్యూ టెక్స్ట్ సేవ్ కాదు, మాకు పంపబడదు. ఈ పేజీ సందర్శనలను మాత్రమే లెక్కిస్తాం.",
+      good: "బాగుంది", ok: "పర్వాలేదు", bad: "బాగాలేదు", wordsPh: "ఉదా: ఏది నచ్చింది, ఏది సరిగ్గా లేదు…",
+      noAspects: "ఈ ప్రశ్నలు చూడటానికి 1 లేదా 2వ దశలో జవాబు ఎంచుకోండి.",
+      overallOnly: { good: "సబితా ట్రేడర్స్‌లో నా అనుభవం బాగుంది.", ok: "సబితా ట్రేడర్స్‌లో నా అనుభవం పర్వాలేదు.", bad: "సబితా ట్రేడర్స్‌లో నా అనుభవం బాగాలేదు." },
+      what: { tractor: "కొత్త ట్రాక్టర్", implement: "పనిముట్టు (ఇంప్లిమెంట్)", parts: "స్పేర్ పార్ట్స్", service: "ట్రాక్టర్ సర్వీస్ / రిపేర్", loan: "లోన్ సహాయం", subsidy: "సబ్సిడీ సహాయం" },
+      aspects: {
+        overall: "మొత్తం అనుభవం", staff: "సిబ్బంది ప్రవర్తన", explain: "ధర, ఫీచర్ల వివరణ",
+        delivery: "డెలివరీ సమయం", paperwork: "పత్రాల పనిలో సహాయం", servicework: "సర్వీస్ పని నాణ్యత",
+        servicetime: "సర్వీస్‌కు పట్టిన సమయం", partsavail: "స్పేర్ పార్ట్స్ లభ్యత"
+      },
+      rated: { good: "బాగుంది.", ok: "పర్వాలేదు.", bad: "బాగాలేదు." }
+    },
+    hi: {
+      tagline: "जॉन डियर ट्रैक्टर के अधिकृत डीलर · ब्रह्मपुर",
+      title: "अपना अनुभव बताइए",
+      intro: "कुछ जवाब चुनिए और चाहें तो अपने शब्दों में लिखिए। हम इन्हें जोड़कर एक रिव्यू बनाएंगे – जिसे आप बदल सकते हैं, कॉपी करके खुद Google पर पोस्ट कर सकते हैं।",
+      s0: "1 · आपका अनुभव कैसा रहा?",
+      ready: "आपका रिव्यू तैयार है। नीचे और जोड़ें, या",
+      jumpLink: "रिव्यू पर जाएं ↓",
+      s1: "2 · आपने हमसे क्या लिया? (वैकल्पिक)", s1hint: "जो लागू हो, सब चुनिए।",
+      s2: "3 · और बताइए (वैकल्पिक)", s2hint: "जितना चाहें उतना जवाब दें। बाकी छोड़ दें।",
+      s3: "4 · अपने शब्दों में (वैकल्पिक)",
+      s3hint: "अच्छा या बुरा – जो कहना चाहें लिखिए। आपके शब्द जैसे लिखेंगे वैसे ही जोड़े जाएंगे।",
+      mic: "बोलिए दबाकर बात करें; हो जाए तो रोकें दबाएं। अगर आपके फोन पर न चले, तो फोन कीबोर्ड का माइक दबाएं।",
+      speak: "बोलिए", stop: "रोकें", listening: "सुन रहा है… अब बोलिए",
+      micNone: "इस ब्राउज़र में आवाज़ उपलब्ध नहीं है। फोन कीबोर्ड का माइक इस्तेमाल करें।",
+      micDenied: "माइक की अनुमति नहीं मिली। ब्राउज़र में अनुमति दें, या कीबोर्ड माइक इस्तेमाल करें।",
+      micLang: "यहाँ इस भाषा में वॉइस टाइपिंग उपलब्ध नहीं है। फोन कीबोर्ड का माइक इस्तेमाल करें।",
+      micErr: "सुनाई नहीं दिया। फिर से कोशिश करें, या कीबोर्ड माइक इस्तेमाल करें।",
+      s4: "5 · आपका रिव्यू", s4hint: "पढ़िए। जो चाहें बदल सकते हैं – यह आपका रिव्यू है।",
+      edited: "आपने रिव्यू खुद बदला है।", rebuild: "मेरे जवाबों से फिर बनाएं",
+      copy: "रिव्यू कॉपी करें", copied: "कॉपी हो गया। अब “Google पर पोस्ट करें” दबाएं।",
+      copyFail: "अपने आप कॉपी नहीं हुआ। रिव्यू बॉक्स में दबाकर रखें, Select all, फिर Copy करें।",
+      emptyReview: "पहले कम से कम एक जवाब चुनें या कुछ लिखें।",
+      post: "Google पर पोस्ट करें ↗",
+      copyPost: "कॉपी करके Google पर पोस्ट करें ↗", copyOnly: "सिर्फ कॉपी करें",
+      copiedPost: "कॉपी हो गया। Google पेज पर: स्टार चुनें, Paste करें, Post दबाएं।",
+      step1: "Google पेज पर अपने स्टार चुनें।",
+      step2: "टेक्स्ट बॉक्स में दबाकर रखें, फिर Paste करें।",
+      step3: "Post दबाएं।",
+      helpTitle: "माफ़ कीजिए, कुछ ठीक नहीं रहा।",
+      helpBody: "कृपया अपना सच्चा रिव्यू पोस्ट करें। समस्या ठीक कराने के लिए हमारी टीम को कॉल या WhatsApp करें:",
+      reset: "फिर से शुरू करें",
+      foot1: "आपका रिव्यू आपका है। अच्छे या बुरे रिव्यू के लिए सबिता ट्रेडर्स कोई इनाम नहीं देता।",
+      foot2: "आपके रिव्यू का टेक्स्ट न सेव होता है, न हमें भेजा जाता है। हम सिर्फ इस पेज पर आने वालों की गिनती करते हैं।",
+      good: "अच्छा", ok: "ठीक", bad: "अच्छा नहीं", wordsPh: "जैसे: क्या अच्छा लगा, क्या गलत हुआ…",
+      noAspects: "ये सवाल देखने के लिए पहले या दूसरे चरण में जवाब चुनें।",
+      overallOnly: { good: "सबिता ट्रेडर्स में मेरा अनुभव अच्छा रहा।", ok: "सबिता ट्रेडर्स में मेरा अनुभव ठीक रहा।", bad: "सबिता ट्रेडर्स में मेरा अनुभव अच्छा नहीं रहा।" },
+      what: { tractor: "नया ट्रैक्टर", implement: "उपकरण (इम्प्लीमेंट)", parts: "स्पेयर पार्ट्स", service: "ट्रैक्टर सर्विस / मरम्मत", loan: "लोन सहायता", subsidy: "सब्सिडी सहायता" },
+      aspects: {
+        overall: "कुल अनुभव", staff: "स्टाफ का व्यवहार", explain: "कीमत और खूबियाँ समझाना",
+        delivery: "डिलीवरी का समय", paperwork: "कागज़ी काम में मदद", servicework: "सर्विस काम की गुणवत्ता",
+        servicetime: "सर्विस में लगा समय", partsavail: "स्पेयर पार्ट्स की उपलब्धता"
+      },
+      rated: { good: "अच्छा रहा।", ok: "ठीक रहा।", bad: "अच्छा नहीं रहा।" }
+    }
+  };
+
+  var WHAT = ["tractor", "implement", "parts", "service", "loan", "subsidy"];
+  // which questions appear for which selections (overall + staff always)
+  var ASPECT_FOR = {
+    overall: null, staff: null,
+    explain: ["tractor", "implement"],
+    delivery: ["tractor", "implement"],
+    paperwork: ["tractor", "loan", "subsidy"],
+    servicework: ["service"],
+    servicetime: ["service"],
+    partsavail: ["parts", "service"]
+  };
+  var ASPECT_ORDER = ["staff", "explain", "delivery", "paperwork", "servicework", "servicetime", "partsavail"];
+
+  var state = { lang: "or", overall: null, what: {}, rate: {}, edited: false };
+  var $ = function (id) { return document.getElementById(id); };
+  var reviewBox = $("review"), wordsBox = $("words");
+
+  function t(k) { return T[state.lang][k]; }
+  // Analytics: counts only. Never sends the review text, names or phone numbers.
+  function track(name, params) {
+    try { if (typeof gtag === "function") gtag("event", name, Object.assign({ page: "Review tool", page_type: "tool", lang: state.lang }, params || {})); } catch (e) {}
+  }
+
+  /* ---------- sentence building (only from what the customer chose or wrote) ---------- */
+  function joinList(items, lang) {
+    if (items.length <= 1) return items.join("");
+    var and = { en: " and ", or: " ଓ ", te: " మరియు ", hi: " और " }[lang];
+    return items.slice(0, -1).join(", ") + and + items[items.length - 1];
+  }
+  function introSentences(lang) {
+    var s = [], bought = [], w = state.what;
+    if (lang === "en") {
+      if (w.tractor) bought.push("a new tractor");
+      if (w.implement) bought.push("an implement");
+      if (w.parts) bought.push("spare parts");
+      if (bought.length) s.push("I bought " + joinList(bought, lang) + " from Sabita Traders.");
+      if (w.service) s.push(bought.length ? "I also got my tractor serviced here." : "I got my tractor serviced at Sabita Traders.");
+      var help = [];
+      if (w.loan) help.push("the loan");
+      if (w.subsidy) help.push("the subsidy application");
+      if (help.length) s.push((s.length ? "I also needed help with " : "I needed help from Sabita Traders with ") + joinList(help, lang) + ".");
+    } else if (lang === "te") {
+      if (w.tractor) bought.push("కొత్త ట్రాక్టర్");
+      if (w.implement) bought.push("ఒక పనిముట్టు");
+      if (w.parts) bought.push("స్పేర్ పార్ట్స్");
+      if (bought.length) s.push("నేను సబితా ట్రేడర్స్ నుండి " + joinList(bought, lang) + " కొన్నాను.");
+      if (w.service) s.push(bought.length ? "ఇక్కడ నా ట్రాక్టర్ సర్వీస్ కూడా చేయించుకున్నాను." : "నేను సబితా ట్రేడర్స్‌లో నా ట్రాక్టర్ సర్వీస్ చేయించుకున్నాను.");
+      var helpT = [];
+      if (w.loan) helpT.push("లోన్");
+      if (w.subsidy) helpT.push("సబ్సిడీ దరఖాస్తు");
+      if (helpT.length) s.push((s.length ? "నాకు " + joinList(helpT, lang) + " కోసం కూడా సహాయం అవసరమైంది." : "నాకు సబితా ట్రేడర్స్ నుండి " + joinList(helpT, lang) + " కోసం సహాయం అవసరమైంది."));
+    } else if (lang === "hi") {
+      if (w.tractor) bought.push("नए ट्रैक्टर");
+      if (w.implement) bought.push("एक उपकरण");
+      if (w.parts) bought.push("स्पेयर पार्ट्स");
+      if (bought.length) s.push("मैंने सबिता ट्रेडर्स से " + joinList(bought, lang) + " की खरीदारी की।");
+      if (w.service) s.push(bought.length ? "मैंने यहाँ अपने ट्रैक्टर की सर्विस भी करवाई।" : "मैंने सबिता ट्रेडर्स में अपने ट्रैक्टर की सर्विस करवाई।");
+      var helpH = [];
+      if (w.loan) helpH.push("लोन");
+      if (w.subsidy) helpH.push("सब्सिडी आवेदन");
+      if (helpH.length) s.push((s.length ? "मुझे " + joinList(helpH, lang) + " के लिए भी मदद चाहिए थी।" : "मुझे सबिता ट्रेडर्स से " + joinList(helpH, lang) + " के लिए मदद चाहिए थी।"));
+    } else {
+      if (w.tractor) bought.push("ନୂଆ ଟ୍ରାକ୍ଟର");
+      if (w.implement) bought.push("ଯନ୍ତ୍ରପାତି");
+      if (w.parts) bought.push("ସ୍ପେୟାର ପାର୍ଟସ");
+      if (bought.length) s.push("ମୁଁ ସବିତା ଟ୍ରେଡର୍ସରୁ " + joinList(bought, lang) + " କିଣିଲି।");
+      if (w.service) s.push(bought.length ? "ମୁଁ ଏଠାରେ ମୋ ଟ୍ରାକ୍ଟର ସର୍ଭିସ ମଧ୍ୟ କରାଇଲି।" : "ମୁଁ ସବିତା ଟ୍ରେଡର୍ସରେ ମୋ ଟ୍ରାକ୍ଟର ସର୍ଭିସ କରାଇଲି।");
+      var helpO = [];
+      if (w.loan) helpO.push("ଲୋନ୍");
+      if (w.subsidy) helpO.push("ସବସିଡି ଆବେଦନ");
+      if (helpO.length) s.push((s.length ? "ମୋତେ " : "ମୋତେ ସବିତା ଟ୍ରେଡର୍ସରୁ ") + joinList(helpO, lang) + " ପାଇଁ " + (s.length ? "ମଧ୍ୟ " : "") + "ସହାୟତା ଦରକାର ଥିଲା।");
+    }
+    return s;
+  }
+  function visibleAspects() {
+    return ASPECT_ORDER.filter(function (a) {
+      var need = ASPECT_FOR[a];
+      if (!need) return Object.keys(state.what).length > 0 || !!state.overall;
+      return need.some(function (w) { return state.what[w]; });
+    });
+  }
+  function buildReview(lang) {
+    var L = T[lang], out = introSentences(lang);
+    if (state.overall) out.push(out.length ? L.aspects.overall + " " + L.rated[state.overall] : L.overallOnly[state.overall]);
+    visibleAspects().forEach(function (a) {
+      var v = state.rate[a]; if (!v) return;
+      out.push(L.aspects[a] + " " + L.rated[v]);
+    });
+    var own = wordsBox.value.trim();
+    if (own) out.push(own);
+    return out.join(" ");
+  }
+  function anyBad() { return state.overall === "bad" || visibleAspects().some(function (a) { return state.rate[a] === "bad"; }); }
+
+
+  var FACE_SVG = {
+    good: '<path d="M12 24c4 5 12 5 16 0"/>', ok: '<path d="M13 26h14"/>', bad: '<path d="M12 28c4-5 12-5 16 0"/>'
+  };
+  var FACE_COLOR = { good: "#367C2B", ok: "#8A6D00", bad: "#B42318" };
+  function renderFaces() {
+    $("faces").innerHTML = ["good", "ok", "bad"].map(function (v) {
+      var c = FACE_COLOR[v];
+      return '<button type="button" class="face" data-v="' + v + '" aria-pressed="' + (state.overall === v) + '">' +
+        '<svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="' + c + '" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle cx="14" cy="16" r="1.5" fill="' + c + '"/><circle cx="26" cy="16" r="1.5" fill="' + c + '"/>' + FACE_SVG[v] + "</svg>" +
+        "<span>" + t(v) + "</span></button>";
+    }).join("");
+    $("jump").hidden = !state.overall;
+  }
+  /* ---------- rendering ---------- */
+  function renderWhat() {
+    $("what").innerHTML = WHAT.map(function (k) {
+      return '<button type="button" class="chip" data-what="' + k + '" aria-pressed="' + (!!state.what[k]) + '">' + t("what")[k] + "</button>";
+    }).join("");
+  }
+  function renderAspects() {
+    var list = visibleAspects();
+    if (!list.length) { $("aspects").innerHTML = '<div class="empty-note">' + t("noAspects") + "</div>"; return; }
+    $("aspects").innerHTML = list.map(function (a) {
+      var v = state.rate[a];
+      return '<div class="aspect" role="group" aria-label="' + t("aspects")[a] + '"><div class="q">' + t("aspects")[a] + '</div><div class="rate">' +
+        ["good", "ok", "bad"].map(function (x) {
+          return '<button type="button" data-aspect="' + a + '" data-v="' + x + '" aria-pressed="' + (v === x) + '">' + t(x) + "</button>";
+        }).join("") + "</div></div>";
+    }).join("");
+  }
+  function updateReview() {
+    if (!state.edited) reviewBox.value = buildReview(state.lang);
+    $("edited-note").hidden = !state.edited;
+    $("rebuild").hidden = !state.edited;
+    $("help").hidden = !anyBad();
+    var empty = !reviewBox.value.trim();
+    $("copy").setAttribute("aria-disabled", empty ? "true" : "false");
+    $("post").setAttribute("aria-disabled", empty ? "true" : "false");
+  }
+  function renderText() {
+    document.documentElement.lang = state.lang;
+    document.body.className = state.lang === "en" ? "" : state.lang;
+    document.querySelectorAll("[data-t]").forEach(function (el) { el.textContent = t(el.getAttribute("data-t")); });
+    document.querySelectorAll(".lang button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === state.lang)); });
+    wordsBox.placeholder = t("wordsPh");
+    reviewBox.placeholder = t("emptyReview");
+  }
+  function setStatus(msg, err) { var s = $("status"); s.textContent = msg; s.className = "status" + (err ? " err" : ""); }
+  function renderAll() { renderText(); renderFaces(); renderWhat(); renderAspects(); updateReview(); }
+
+  /* ---------- events ---------- */
+  document.querySelector(".lang").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-lang]"); if (!b) return;
+    if (listening) $("mic").click();
+    state.lang = b.dataset.lang; setStatus(""); renderAll(); setMic(false);
+    track("language_switch", { to: state.lang });
+  });
+  $("faces").addEventListener("click", function (e) {
+    var b = e.target.closest(".face"); if (!b) return;
+    state.overall = state.overall === b.dataset.v ? null : b.dataset.v;   // tap again to clear
+    if (state.overall) track("review_overall", { rating: state.overall });
+    renderFaces(); renderAspects(); updateReview(); setStatus("");
+  });
+  $("jump-link").addEventListener("click", function (e) {
+    e.preventDefault(); $("h4").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  // One button: copy the review, then let the link open Google.
+  $("post").addEventListener("click", function (e) {
+    var text = reviewBox.value.trim();
+    if (!text) { e.preventDefault(); setStatus(t("emptyReview"), true); return; }
+    var ok = false;
+    try { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).catch(function () { fallbackCopy(); }); ok = true; } } catch (x) {}
+    if (!ok) ok = fallbackCopy();
+    setStatus(ok ? t("copiedPost") : t("copyFail"), !ok);
+    track("review_copy_post", { copied: ok, edited: state.edited, details: Object.keys(state.rate).length, spoke: !!wordsBox.value.trim() });
+    if (!ok) e.preventDefault();   // stay so they can copy by hand first
+  });
+  $("what").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-what]"); if (!b) return;
+    var k = b.dataset.what;
+    if (state.what[k]) delete state.what[k]; else state.what[k] = true;
+    renderWhat(); renderAspects(); updateReview(); setStatus("");
+  });
+  $("aspects").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-aspect]"); if (!b) return;
+    var a = b.dataset.aspect, v = b.dataset.v;
+    if (state.rate[a] === v) delete state.rate[a]; else state.rate[a] = v;   // tap again to clear
+    renderAspects(); updateReview(); setStatus("");
+  });
+  wordsBox.addEventListener("input", function () { updateReview(); setStatus(""); });
+  reviewBox.addEventListener("input", function () {
+    state.edited = reviewBox.value !== buildReview(state.lang);
+    $("edited-note").hidden = !state.edited; $("rebuild").hidden = !state.edited;
+    $("copy").setAttribute("aria-disabled", reviewBox.value.trim() ? "false" : "true");
+    $("post").setAttribute("aria-disabled", reviewBox.value.trim() ? "false" : "true");
+  });
+  $("rebuild").addEventListener("click", function () { state.edited = false; updateReview(); setStatus(""); });
+
+  function fallbackCopy() {
+    try {
+      reviewBox.focus(); reviewBox.select(); reviewBox.setSelectionRange(0, reviewBox.value.length);
+      return document.execCommand && document.execCommand("copy");
+    } catch (e) { return false; }
+  }
+  $("copy").addEventListener("click", function () {
+    var text = reviewBox.value.trim();
+    if (!text) { setStatus(t("emptyReview"), true); return; }
+    var done = function () { setStatus(t("copied")); };
+    var fail = function () { if (fallbackCopy()) done(); else setStatus(t("copyFail"), true); };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fail);
+      else fail();
+    } catch (e) { fail(); }
+  });
+  $("reset").addEventListener("click", function () {
+    state.overall = null; state.what = {}; state.rate = {}; state.edited = false; wordsBox.value = ""; setStatus(""); renderAll();
+    window.scrollTo(0, 0);
+  });
+
+  /* ---------- voice: Claude dictation (inside Claude) → Chrome speech recognition → keyboard mic tip ---------- */
+  var claudeDict = null, rec = null, listening = false;
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (window.claude && typeof window.claude.use === "function") {
+    try { window.claude.use("dictation").then(function (d) { claudeDict = d || null; wireClaude(); }, function () {}); } catch (e) {}
+  }
+  function appendWords(text) {
+    text = (text || "").trim(); if (!text) return;
+    var cur = wordsBox.value.replace(/\s+$/, "");
+    wordsBox.value = cur ? cur + " " + text : text;
+    updateReview();
+  }
+  function setMic(on) {
+    listening = on;
+    $("mic").setAttribute("aria-pressed", String(on));
+    $("mic-label").textContent = on ? t("stop") : t("speak");
+    $("live").textContent = on ? t("listening") : "";
+  }
+  function micMessage(key) { setMic(false); setStatus(t(key), true); }
+  var claudeWired = false;
+  function wireClaude() {
+    if (!claudeDict || claudeWired) return; claudeWired = true;
+    claudeDict.onPartial(function (p) { if (listening) $("live").textContent = p.text; });
+    claudeDict.onFinal(function (f) { appendWords(f.text); if (listening) $("live").textContent = t("listening"); });
+    claudeDict.onState(function (s) { if (s.state === "idle") setMic(false); });
+  }
+  $("mic").addEventListener("click", function () {
+    setStatus("");
+    if (listening) {
+      if (claudeDict) claudeDict.stop().catch(function () {});
+      if (rec) { try { rec.stop(); } catch (e) {} }
+      setMic(false); return;
+    }
+    track("review_speak_start");
+    if (claudeDict) {
+      claudeDict.start().catch(function (e) { micMessage(e && e.code === "not_granted" ? "micDenied" : "micErr"); });
+      setMic(true); return;
+    }
+    if (!SR) { micMessage("micNone"); return; }
+    rec = new SR();
+    rec.lang = { or: "or-IN", en: "en-IN", te: "te-IN", hi: "hi-IN" }[state.lang];
+    rec.interimResults = true; rec.continuous = true; rec.maxAlternatives = 1;
+    rec.onresult = function (e) {
+      var interim = "";
+      for (var i = e.resultIndex; i < e.results.length; i++) {
+        if (e.results[i].isFinal) appendWords(e.results[i][0].transcript);
+        else interim += e.results[i][0].transcript;
+      }
+      $("live").textContent = interim || t("listening");
+    };
+    rec.onerror = function (e) {
+      var c = e && e.error;
+      micMessage(c === "not-allowed" || c === "service-not-allowed" ? "micDenied" : c === "language-not-supported" ? "micLang" : c === "no-speech" || c === "aborted" ? "micErr" : "micNone");
+    };
+    rec.onend = function () { setMic(false); };
+    try { rec.start(); setMic(true); } catch (e) { micMessage("micNone"); }
+  });
+
+  renderAll();
+  setMic(false);
+})();
+</script>
+</body>
+</html>

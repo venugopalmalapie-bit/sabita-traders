@@ -6,6 +6,15 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-21 – New customer review helper at /review (not linked from menus)
+- Approved by: Venu (21 Nov 2026), after preview of the Claude test version; analytics approved
+- Backup branch before change: `backup-2026-11-21-before-review-tool`
+- New `review/index.html` → www.sabitatraders.com/review: customer taps Good/OK/Not good, optional details and own words (Speak button uses the phone's speech recognition), review is built only from their answers, one button copies it and opens the Google review page. Odia (default), English, Telugu, Hindi. Help line 89085 89085 shown on any "Not good". No AI, no stored data, no rewards.
+- Not in menus or sitemap; page has `noindex, nofollow`.
+- Analytics (G-B5JR51T46D, same staff flag as the site): events review_overall (rating), review_speak_start, review_copy_post (copied, edited, number of details, spoke yes/no), language_switch. The review text, names and phone numbers are never sent.
+- Desktop: questions on the left, live review on the right; phone: single column.
+- Odia, Telugu and Hindi wording is a draft pending native-speaker review.
+
 ## 2026-11-21 – On-road price post: tractor image no longer cropped on desktop
 - Approved by: Venu (21 Nov 2026), after preview
 - Backup branch before change: `backup-2026-11-21-before-onroad-img`
