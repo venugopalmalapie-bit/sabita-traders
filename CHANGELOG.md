@@ -6,6 +6,12 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-21 – Review helper: Speak button removed, keyboard-mic tip instead
+- Approved by: Venu (21 Nov 2026)
+- Backup branch before change: `backup-2026-11-21-before-remove-speak`
+- `review/index.html`: removed the in-page Speak button (browser speech recognition, mic permission pop-up) to cut a failure point. Step 4 now has the text box plus a one-line tip in all 4 languages to use the phone keyboard's microphone.
+- Analytics: `review_speak_start` event removed; `review_copy_post` now sends `own_words` (yes/no) instead of `spoke`. Review text is still never sent.
+
 ## 2026-11-21 – New customer review helper at /review (not linked from menus)
 - Approved by: Venu (21 Nov 2026), after preview of the Claude test version; analytics approved
 - Backup branch before change: `backup-2026-11-21-before-review-tool`

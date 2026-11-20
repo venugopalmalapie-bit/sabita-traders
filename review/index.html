@@ -56,9 +56,6 @@ textarea:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--gree
 .mic{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);background:var(--muted-bg);border-radius:6px;padding:10px}
 .mic svg{flex:none;margin-top:2px}
 #review{min-height:170px;background:#FFFEF5}
-.microw{display:flex;flex-direction:column;gap:8px}
-#mic[aria-pressed="true"]{background:var(--error);border-color:var(--error);color:#fff}
-#mic[aria-pressed="true"] svg{animation:pulse 1s infinite}
 @keyframes pulse{50%{opacity:.35}}
 .live{font-size:14px;color:var(--muted);font-style:italic;min-height:0}
 .live:empty{display:none}
@@ -85,7 +82,6 @@ footer a{color:#fff}
 .face[aria-pressed="true"][data-v="bad"]{border:2px solid var(--error);background:var(--warn-bg);color:var(--error)}
 .jump{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;background:var(--tint);border-radius:8px;padding:10px 12px;font-size:15px;font-weight:600;color:var(--deep)}
 .jump a{color:var(--deep)}
-.btn-speak{min-height:68px;border:2px solid var(--green);background:#fff;color:var(--green);font-size:19px;border-radius:12px}
 .btn-big{min-height:62px;font-size:19px;border-radius:12px}
 .link{background:none;border:0;padding:10px 0;color:var(--green);font:600 15px/1.2 inherit;font-family:inherit;text-decoration:underline;cursor:pointer;align-self:center;min-height:44px}
 /* ---- desktop: questions left, live review right (sticky) ---- */
@@ -153,15 +149,9 @@ footer a{color:#fff}
     <section class="card" aria-labelledby="h3">
       <h2 id="h3"><label for="words" data-t="s3"></label></h2>
       <p class="hint" data-t="s3hint"></p>
-      <div class="microw">
-        <button type="button" class="btn btn-speak" id="mic" aria-pressed="false">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg>
-          <span id="mic-label"></span>
-        </button>
-        <div class="live" id="live" aria-live="polite"></div>
-      </div>
+
       <textarea id="words" autocomplete="off"></textarea>
-      <div class="mic"><span data-t="mic"></span></div>
+      <div class="mic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg><span data-t="mic"></span></div>
     </section>
 
     <section class="card" aria-labelledby="h4">
@@ -213,12 +203,7 @@ footer a{color:#fff}
       s2: "3 · Tell us more (optional)", s2hint: "Answer only what you want. Skip the rest.",
       s3: "4 · In your own words (optional)",
       s3hint: "Anything you want to say – good or bad. Your words are added exactly as you write them.",
-      mic: "Tap Speak and talk; tap Stop when done. If it does not work on your phone, tap the microphone on your phone keyboard instead.",
-      speak: "Speak", stop: "Stop", listening: "Listening… speak now",
-      micNone: "Voice is not available in this browser. Use the microphone on your phone keyboard.",
-      micDenied: "Microphone permission was not given. Allow it in the browser, or use the keyboard microphone.",
-      micLang: "Voice typing is not available for this language here. Use the microphone on your phone keyboard.",
-      micErr: "Could not hear you. Try again, or use the keyboard microphone.",
+      mic: "Prefer to speak? Tap the microphone on your phone keyboard and talk – your words appear in the box.",
       s4: "5 · Your review",
       s4hint: "Read it. You can change anything – it is your review.",
       edited: "You changed the review by hand.", rebuild: "Rebuild from my answers",
@@ -258,12 +243,7 @@ footer a{color:#fff}
       s2: "୩ · ଆହୁରି କୁହନ୍ତୁ (ଇଚ୍ଛାଧୀନ)", s2hint: "ଯାହା ଚାହିଁବେ କେବଳ ସେତିକି ଉତ୍ତର ଦିଅନ୍ତୁ। ବାକି ଛାଡ଼ିଦିଅନ୍ତୁ।",
       s3: "୪ · ନିଜ ଭାଷାରେ (ଇଚ୍ଛାଧୀନ)",
       s3hint: "ଭଲ କି ଖରାପ – ଯାହା କହିବାକୁ ଚାହାଁନ୍ତି ଲେଖନ୍ତୁ। ଆପଣଙ୍କ କଥା ଠିକ୍ ଯେମିତି ଲେଖିବେ ସେମିତି ଯୋଡ଼ାଯିବ।",
-      mic: "କହନ୍ତୁ ଟାପ୍ କରି କଥା କୁହନ୍ତୁ; ଶେଷ ହେଲେ ବନ୍ଦ ଟାପ୍ କରନ୍ତୁ। ଆପଣଙ୍କ ଫୋନରେ ନ ଚାଲିଲେ, ଫୋନ୍ କିବୋର୍ଡର ମାଇକ୍ ଟାପ୍ କରନ୍ତୁ।",
-      speak: "କହନ୍ତୁ", stop: "ବନ୍ଦ କରନ୍ତୁ", listening: "ଶୁଣୁଛି… ଏବେ କୁହନ୍ତୁ",
-      micNone: "ଏହି ବ୍ରାଉଜରରେ ଭଏସ୍ ଉପଲବ୍ଧ ନାହିଁ। ଫୋନ୍ କିବୋର୍ଡର ମାଇକ୍ ବ୍ୟବହାର କରନ୍ତୁ।",
-      micDenied: "ମାଇକ୍ ଅନୁମତି ମିଳିଲା ନାହିଁ। ବ୍ରାଉଜରରେ ଅନୁମତି ଦିଅନ୍ତୁ, କିମ୍ବା କିବୋର୍ଡ ମାଇକ୍ ବ୍ୟବହାର କରନ୍ତୁ।",
-      micLang: "ଏଠାରେ ଏହି ଭାଷାରେ ଭଏସ୍ ଟାଇପିଂ ଉପଲବ୍ଧ ନାହିଁ। ଫୋନ୍ କିବୋର୍ଡର ମାଇକ୍ ବ୍ୟବହାର କରନ୍ତୁ।",
-      micErr: "ଶୁଣିପାରିଲି ନାହିଁ। ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ, କିମ୍ବା କିବୋର୍ଡ ମାଇକ୍ ବ୍ୟବହାର କରନ୍ତୁ।",
+      mic: "କହିବାକୁ ଚାହାଁନ୍ତି? ଫୋନ୍ କିବୋର୍ଡର ମାଇକ୍ ଟାପ୍ କରି କୁହନ୍ତୁ – ଆପଣଙ୍କ କଥା ବାକ୍ସରେ ଲେଖା ହୋଇଯିବ।",
       s4: "୫ · ଆପଣଙ୍କ ରିଭ୍ୟୁ",
       s4hint: "ପଢ଼ନ୍ତୁ। ଯାହା ଚାହିଁବେ ବଦଳାଇପାରିବେ – ଏହା ଆପଣଙ୍କ ରିଭ୍ୟୁ।",
       edited: "ଆପଣ ରିଭ୍ୟୁକୁ ହାତରେ ବଦଳାଇଛନ୍ତି।", rebuild: "ମୋ ଉତ୍ତରରୁ ପୁଣି ତିଆରି କରନ୍ତୁ",
@@ -303,12 +283,7 @@ footer a{color:#fff}
       s2: "3 · ఇంకా చెప్పండి (ఐచ్ఛికం)", s2hint: "మీకు కావలసినవి మాత్రమే జవాబు ఇవ్వండి. మిగతావి వదిలేయండి.",
       s3: "4 · మీ మాటల్లో (ఐచ్ఛికం)",
       s3hint: "మంచిదైనా చెడ్డదైనా – మీరు చెప్పాలనుకున్నది రాయండి. మీరు రాసినట్టే మీ మాటలు జోడించబడతాయి.",
-      mic: "మాట్లాడండి నొక్కి మాట్లాడండి; అయిపోయాక ఆపండి నొక్కండి. మీ ఫోన్‌లో పని చేయకపోతే, ఫోన్ కీబోర్డ్‌లోని మైక్ నొక్కండి.",
-      speak: "మాట్లాడండి", stop: "ఆపండి", listening: "వింటున్నాను… ఇప్పుడు మాట్లాడండి",
-      micNone: "ఈ బ్రౌజర్‌లో వాయిస్ అందుబాటులో లేదు. ఫోన్ కీబోర్డ్ మైక్ ఉపయోగించండి.",
-      micDenied: "మైక్ అనుమతి ఇవ్వలేదు. బ్రౌజర్‌లో అనుమతి ఇవ్వండి, లేదా కీబోర్డ్ మైక్ ఉపయోగించండి.",
-      micLang: "ఇక్కడ ఈ భాషలో వాయిస్ టైపింగ్ అందుబాటులో లేదు. ఫోన్ కీబోర్డ్ మైక్ ఉపయోగించండి.",
-      micErr: "వినిపించలేదు. మళ్ళీ ప్రయత్నించండి, లేదా కీబోర్డ్ మైక్ ఉపయోగించండి.",
+      mic: "మాట్లాడాలనుకుంటున్నారా? ఫోన్ కీబోర్డ్‌లోని మైక్ నొక్కి మాట్లాడండి – మీ మాటలు బాక్స్‌లో వస్తాయి.",
       s4: "5 · మీ రివ్యూ", s4hint: "చదవండి. ఏదైనా మార్చవచ్చు – ఇది మీ రివ్యూ.",
       edited: "మీరు రివ్యూను స్వయంగా మార్చారు.", rebuild: "నా జవాబుల నుండి మళ్ళీ తయారు చేయండి",
       copy: "రివ్యూ కాపీ చేయండి", copied: "కాపీ అయింది. ఇప్పుడు “Googleలో పోస్ట్ చేయండి” నొక్కండి.",
@@ -347,12 +322,7 @@ footer a{color:#fff}
       s2: "3 · और बताइए (वैकल्पिक)", s2hint: "जितना चाहें उतना जवाब दें। बाकी छोड़ दें।",
       s3: "4 · अपने शब्दों में (वैकल्पिक)",
       s3hint: "अच्छा या बुरा – जो कहना चाहें लिखिए। आपके शब्द जैसे लिखेंगे वैसे ही जोड़े जाएंगे।",
-      mic: "बोलिए दबाकर बात करें; हो जाए तो रोकें दबाएं। अगर आपके फोन पर न चले, तो फोन कीबोर्ड का माइक दबाएं।",
-      speak: "बोलिए", stop: "रोकें", listening: "सुन रहा है… अब बोलिए",
-      micNone: "इस ब्राउज़र में आवाज़ उपलब्ध नहीं है। फोन कीबोर्ड का माइक इस्तेमाल करें।",
-      micDenied: "माइक की अनुमति नहीं मिली। ब्राउज़र में अनुमति दें, या कीबोर्ड माइक इस्तेमाल करें।",
-      micLang: "यहाँ इस भाषा में वॉइस टाइपिंग उपलब्ध नहीं है। फोन कीबोर्ड का माइक इस्तेमाल करें।",
-      micErr: "सुनाई नहीं दिया। फिर से कोशिश करें, या कीबोर्ड माइक इस्तेमाल करें।",
+      mic: "बोलना चाहते हैं? फोन कीबोर्ड का माइक दबाकर बोलिए – आपके शब्द बॉक्स में आ जाएंगे।",
       s4: "5 · आपका रिव्यू", s4hint: "पढ़िए। जो चाहें बदल सकते हैं – यह आपका रिव्यू है।",
       edited: "आपने रिव्यू खुद बदला है।", rebuild: "मेरे जवाबों से फिर बनाएं",
       copy: "रिव्यू कॉपी करें", copied: "कॉपी हो गया। अब “Google पर पोस्ट करें” दबाएं।",
@@ -530,8 +500,7 @@ footer a{color:#fff}
   /* ---------- events ---------- */
   document.querySelector(".lang").addEventListener("click", function (e) {
     var b = e.target.closest("button[data-lang]"); if (!b) return;
-    if (listening) $("mic").click();
-    state.lang = b.dataset.lang; setStatus(""); renderAll(); setMic(false);
+    state.lang = b.dataset.lang; setStatus(""); renderAll();
     track("language_switch", { to: state.lang });
   });
   $("faces").addEventListener("click", function (e) {
@@ -551,7 +520,7 @@ footer a{color:#fff}
     try { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).catch(function () { fallbackCopy(); }); ok = true; } } catch (x) {}
     if (!ok) ok = fallbackCopy();
     setStatus(ok ? t("copiedPost") : t("copyFail"), !ok);
-    track("review_copy_post", { copied: ok, edited: state.edited, details: Object.keys(state.rate).length, spoke: !!wordsBox.value.trim() });
+    track("review_copy_post", { copied: ok, edited: state.edited, details: Object.keys(state.rate).length, own_words: !!wordsBox.value.trim() });
     if (!ok) e.preventDefault();   // stay so they can copy by hand first
   });
   $("what").addEventListener("click", function (e) {
@@ -596,66 +565,7 @@ footer a{color:#fff}
     window.scrollTo(0, 0);
   });
 
-  /* ---------- voice: Claude dictation (inside Claude) → Chrome speech recognition → keyboard mic tip ---------- */
-  var claudeDict = null, rec = null, listening = false;
-  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if (window.claude && typeof window.claude.use === "function") {
-    try { window.claude.use("dictation").then(function (d) { claudeDict = d || null; wireClaude(); }, function () {}); } catch (e) {}
-  }
-  function appendWords(text) {
-    text = (text || "").trim(); if (!text) return;
-    var cur = wordsBox.value.replace(/\s+$/, "");
-    wordsBox.value = cur ? cur + " " + text : text;
-    updateReview();
-  }
-  function setMic(on) {
-    listening = on;
-    $("mic").setAttribute("aria-pressed", String(on));
-    $("mic-label").textContent = on ? t("stop") : t("speak");
-    $("live").textContent = on ? t("listening") : "";
-  }
-  function micMessage(key) { setMic(false); setStatus(t(key), true); }
-  var claudeWired = false;
-  function wireClaude() {
-    if (!claudeDict || claudeWired) return; claudeWired = true;
-    claudeDict.onPartial(function (p) { if (listening) $("live").textContent = p.text; });
-    claudeDict.onFinal(function (f) { appendWords(f.text); if (listening) $("live").textContent = t("listening"); });
-    claudeDict.onState(function (s) { if (s.state === "idle") setMic(false); });
-  }
-  $("mic").addEventListener("click", function () {
-    setStatus("");
-    if (listening) {
-      if (claudeDict) claudeDict.stop().catch(function () {});
-      if (rec) { try { rec.stop(); } catch (e) {} }
-      setMic(false); return;
-    }
-    track("review_speak_start");
-    if (claudeDict) {
-      claudeDict.start().catch(function (e) { micMessage(e && e.code === "not_granted" ? "micDenied" : "micErr"); });
-      setMic(true); return;
-    }
-    if (!SR) { micMessage("micNone"); return; }
-    rec = new SR();
-    rec.lang = { or: "or-IN", en: "en-IN", te: "te-IN", hi: "hi-IN" }[state.lang];
-    rec.interimResults = true; rec.continuous = true; rec.maxAlternatives = 1;
-    rec.onresult = function (e) {
-      var interim = "";
-      for (var i = e.resultIndex; i < e.results.length; i++) {
-        if (e.results[i].isFinal) appendWords(e.results[i][0].transcript);
-        else interim += e.results[i][0].transcript;
-      }
-      $("live").textContent = interim || t("listening");
-    };
-    rec.onerror = function (e) {
-      var c = e && e.error;
-      micMessage(c === "not-allowed" || c === "service-not-allowed" ? "micDenied" : c === "language-not-supported" ? "micLang" : c === "no-speech" || c === "aborted" ? "micErr" : "micNone");
-    };
-    rec.onend = function () { setMic(false); };
-    try { rec.start(); setMic(true); } catch (e) { micMessage("micNone"); }
-  });
-
   renderAll();
-  setMic(false);
 })();
 </script>
 </body>
