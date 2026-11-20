@@ -6,6 +6,11 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-21 – On-road price post: tractor image no longer cropped on desktop
+- Approved by: Venu (21 Nov 2026), after preview
+- Backup branch before change: `backup-2026-11-21-before-onroad-img`
+- `tractor-on-road-price-odisha.html` + `or/`: 5045D cutout image `object-fit:cover` → `contain`.
+
 ## 2026-11-21 – Analytics tracking upgrade, new titles, 404 page
 - Approved by: Venu (21 Nov 2026), after preview of titles and 404 page
 - Backup branch before change: `backup-2026-11-21-before-analytics`
