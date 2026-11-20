@@ -6,6 +6,18 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-21 – Design audit, Wave 2 (next steps, links, Odia readability, consistency)
+- Approved by: Venu (21 Nov 2026)
+- Backup branch before change: `backup-2026-11-21-before-design-wave2`
+- "Next steps" strip above the footer (EN + OR): 10 model pages (compare, exchange value, subsidy, WhatsApp price), exchange (tractor prices, EMI, subsidy, WhatsApp), EMI (tractor prices, compare, subsidy, WhatsApp), service (book on WhatsApp, exchange, tractors, implements)
+- Footer on all pages: added "Compare models" and "Subsidy guide"; home tractor section: "Compare models by HP and use" link
+- Odia pages: 10/12/13/14px text bumped to 12/13.5/14.5/15px; line height 1.55 for table cells, labels, buttons and spans; underline offset for Odia script
+- Exchange tool (EN + OR): WhatsApp message includes year/condition/tyres/papers only if the farmer chose them (or entered a price, so the estimate's inputs are sent)
+- Desktop: menu kept on one row (smaller gaps 1101–1239px; padding fix when it wraps at ≤1100px); round floating WhatsApp button only on screens ≥1340px, placed in the empty side margin so it never covers content
+- Buttons: all rounded; yellow reserved for WhatsApp ("Get directions", "Check exchange value" -> green; "Rate us on Google" -> outline)
+- Accessibility: visible focus outline (dark ring + yellow halo); form field borders darker (#8C8A80)
+- Checks: every click replayed on all pages, only new links differ; no script errors; no new markup errors; 0 broken links; CLS 0; Lighthouse unchanged (model 98, contact 99)
+
 ## 2026-11-21 – One delivery figure (340+) and real showroom photo on home
 - Approved by: Venu (21 Nov 2026): "keep it 340+ as consistent"; showroom photo is real; all 11 lender tie-ups confirmed active (logos unchanged)
 - Backup branch before change: `backup-2026-11-21-before-340-showroom-photo`
