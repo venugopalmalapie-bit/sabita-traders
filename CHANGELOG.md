@@ -6,6 +6,17 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-20 – New blog post: "Not eligible for the tractor subsidy?" (SEO/AEO/GEO/CRO)
+- Approved by: Venu (20 Nov 2026)
+- Backup branch before change: `backup-2026-11-20-before-not-eligible-post`
+- New: `tractor-subsidy-not-eligible-odisha.html`, `or/tractor-subsidy-not-eligible-odisha.html` (built from the subsidy-guide page frame; author M Krishna Reddy, MD)
+- Content: answer-first summary, "find your reason" table (Farmer ID, target full, permit lapsed, 5-year moratorium, implement refused, loan rejected), one section per reason, loan/exchange/KCC routes, group and rental routes, mistakes list, 7 FAQs, author box, linked official sources
+- Facts checked against: Odisha FM-DBT Operational Modality 2026 (cl. 2.1 repeat subsidy 100/75/50%, 4.1 WSHG up to 33% target at 75%, 5.10 implements only for tractor owners, 5.11 lapsed permit 3-month wait); RBI collateral-free agri loans ₹2 lakh (6 Dec 2024); RBI MISS/KCC 2025-26 (7%, 3% prompt repayment, ₹3 lakh); Balaram notification (groups of 5+); AIF CHC minimum 4 machines (Canara Bank). Second-subsidy rupee figures (₹90,000 / ₹1,12,500) are our calculation from the 75% rule and are labelled as such
+- CRO: WhatsApp button in the hero, a pre-filled WhatsApp "Ask us" on every reason row (message names the reason), two in-article help boxes (next target release; loan options), sticky side panel, enquiry form reworded; reasons table becomes stacked cards on mobile so the button stays visible
+- Structured data: BlogPosting (citations, isBasedOn the subsidy guide), BreadcrumbList, FAQPage (7 Q&A)
+- Site-wide: new card first on the Blog page (EN + Odia) and in the Blog's blogPost list; subsidy guide links to the new post (loan section + Read next, EN; Read next, Odia); sitemap.xml (+2 URLs) and llms.txt updated
+- To undo: revert this commit
+
 ## 2026-11-20 – Official John Deere videos near the top of 8 model pages (SEO/AEO/GEO/CRO, stopgap)
 - Approved by: Venu (20 Nov 2026), as a stopgap until our own Odia walkaround videos
 - Backup branch before change: `backup-2026-11-20-before-model-videos`
