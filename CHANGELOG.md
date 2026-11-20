@@ -18,7 +18,7 @@ Or restore a whole backup: repo → branch menu → pick the `backup-...` branch
 - Subsidy guide (EN + OR): 3-column subsidy table becomes stacked cards on phones
 - Farmer resources (EN + OR): removed "delivery moments will be added here" line; YouTube thumbnails maxresdefault -> hqdefault (lighter, always exists)
 - WhatsApp and phone icons on all WhatsApp/Call buttons (CSS, site-wide)
-- Checks: every click/select replayed on all pages, only intended differences; 0 broken links; markup errors 38 -> 28 (empty srcset fixed earlier); CLS 0; home realistic phone test 97-98, main photo 2.3-2.4 s
+- Checks: every click/select replayed on all pages, only intended differences; 0 broken links; no new markup errors; CLS 0; home realistic phone test 97-98, main photo 2.3-2.4 s
 
 ## 2026-11-21 – Technical audit, part 2: lighter Odia pages, faster Odia homepage
 - Approved by: Venu (21 Nov 2026)
