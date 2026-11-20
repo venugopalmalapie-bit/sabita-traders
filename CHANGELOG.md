@@ -17,6 +17,16 @@ Or restore a whole backup: repo → branch menu → pick the `backup-...` branch
 - Site-wide: new card first on the Blog page (EN + Odia) and in the Blog's blogPost list; subsidy guide links to the new post (loan section + Read next, EN; Read next, Odia); sitemap.xml (+2 URLs) and llms.txt updated
 - To undo: revert this commit
 
+## 2026-11-20 – Privacy notice and small cleanups
+- Approved by: Venu (20 Nov 2026), including the two data-sharing lines
+- Backup branch before change: `backup-2026-11-20-before-privacy`
+- New: `privacy.html`, `or/privacy.html` (who we are, what the site collects: WhatsApp enquiries, Google Analytics, language choice, YouTube/Maps; how details are used and shared only on request; retention; how to correct or delete); "Privacy" / "ଗୋପନୀୟତା" link in every footer next to the GSTIN; sitemap.xml (52 URLs)
+- Odia menu: "Exchange" now "ଏକ୍ସଚେଞ୍ଜ"
+- Blog: "New guides every week" replaced with "Practical guides for Ganjam farmers" (EN + Odia)
+- 5039D pages (EN + Odia): official John Deere India video "5039D and 5042D PowerPro" (click-to-play) + VideoObject
+- Link previews: og:image now JPG copies in `images/og/` (15 images, ~1 MB) with width/height, so WhatsApp shows them reliably
+- Comparison pages: analytics page label corrected (was "John Deere 5105")
+
 ## 2026-11-20 – Contact page: Managing Director line
 - Approved by: Venu (20 Nov 2026). "Formerly Krishna Motors" deliberately not added (old Krishna Motors listings still show other brands; revisit once they are cleaned up)
 - contact.html and or/contact.html business details: "Managing Director: M Krishna Reddy"
