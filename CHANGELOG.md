@@ -17,6 +17,14 @@ Or restore a whole backup: repo → branch menu → pick the `backup-...` branch
 - Site-wide: new card first on the Blog page (EN + Odia) and in the Blog's blogPost list; subsidy guide links to the new post (loan section + Read next, EN; Read next, Odia); sitemap.xml (+2 URLs) and llms.txt updated
 - To undo: revert this commit
 
+## 2026-11-21 – New About page
+- Approved by: Venu (21 Nov 2026), copy and phone/desktop previews
+- Backup branch before change: `backup-2026-11-21-before-about`
+- New: `about.html`, `or/about.html`: farming-family story, 20+ years in agriculture and farm equipment (owner's statement), one window for subsidy (register, apply, follow up until credited), loan (11 partners), RTO registration and insurance help, exchange; service empathy section (no response-time promise yet); proof tiles (20+ years, only authorised dealer for Ganjam, 340+ tractors, 11 lenders, 22 blocks, 5-yr/5,000-hr warranty); 6 FAQs; WhatsApp CTAs
+- Structured data: AboutPage + dealer record (with knowsAbout) + BreadcrumbList + FAQPage
+- "About us" / "ଆମ ବିଷୟରେ" link in every footer; sitemap.xml (54 URLs); llms.txt entry; JPG link-preview image of the workshop
+- Photo: existing workshop photo; swap for a team/showroom photo when available
+
 ## 2026-11-20 – Privacy notice and small cleanups
 - Approved by: Venu (20 Nov 2026), including the two data-sharing lines
 - Backup branch before change: `backup-2026-11-20-before-privacy`
