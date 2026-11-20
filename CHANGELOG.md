@@ -6,6 +6,15 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-21 – Two new blog posts: paddy puddling guide and on-road price explained (SEO/AEO/GEO/CRO)
+- Approved by: Venu (21 Nov 2026), drafts approved in chat, publish approved after preview
+- Backup branch before change: `backup-2026-11-21-before-puddling-onroad-posts`
+- New: `best-tractor-for-paddy-puddling-ganjam.html` + `or/` (2WD vs 4WD, HP, Paddy Special Rotary Tiller vs Puddler cum Leveler, 4WD price table with MRP/after subsidy, buying season, see one working nearby; 5 FAQs; sources: Ganjam district agriculture dept (paddy 2,23,500 ha; irrigation 61% kharif / 12% rabi), Operational Modality 2026, our sales records)
+- New: `tractor-on-road-price-odisha.html` + `or/` (MRP = tractor only; RTO registration OD07/OD32 with papers; insurance; DBT subsidy paid to the farmer's bank after verification; loan and hypothecation; how we help; 5 FAQs; sources: Operational Modality 2026, Motor Vehicles Act 1988 s.39/s.146, our subsidy guide)
+- Both: answer-first summary, quick answer box, WhatsApp buttons and page-specific sticky WhatsApp message (Odia pages send Odia text), enquiry form, BlogPosting + FAQPage + BreadcrumbList schema, EN/OR hreflang
+- Wiring: blog index cards and Blog schema (EN + OR); "What's in the on-road price ›" link in the price box on all 10 model pages (EN + OR); puddling guide link on 5045D, 5105, 5050D pages and the implements page; on-road link in the subsidy guide; sitemap (+4 URLs); llms.txt entries; llms-full.txt regenerated
+- Checks: links 0 broken; clicks replayed with no script errors; form and sticky WhatsApp messages tested (EN + OR); Lighthouse new pages 99–100 performance, 98 accessibility, 100 SEO
+
 ## 2026-11-21 – Competitor and AI-search audit: fixes on the site
 - Approved by: Venu (21 Nov 2026). Directory correction emails parked; comparison stays John Deere only; neutral price FAQ approved; no Telugu page for now
 - Backup branch before change: `backup-2026-11-21-before-ai-search-fixes`
