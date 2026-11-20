@@ -6,6 +6,20 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-21 – Design audit, Wave 1 (enquiries and phone usability)
+- Approved by: Venu (21 Nov 2026)
+- Backup branch before change: `backup-2026-11-21-before-design-wave1`
+- Source: 8-reviewer design audit (mobile, conversion, layout, Odia typography, brand, accessibility, consistency, navigation); findings checked against the pages before fixing
+- Model pages (10 EN + 10 OR): phone-only price strip under the title (MRP, after-subsidy, "Get today's on-road price on WhatsApp"); phone photo 420 -> 220px and title 48 -> 34px so it fits the first screen
+- Sticky WhatsApp button now sends the page's own message: model pages (on-road price for the chosen drive), service, subsidy guide, not-eligible post, EMI, exchange, Aska, Bhanjanagar (EN + OR; Odia translation at tap verified)
+- Home (EN + OR): "What do you need?" tiles under the hero (Buy / Loan & subsidy / Exchange / Service); compact tractor cards on phones; "Get on-road price" text link -> yellow "On-road price on WhatsApp" button; stats 2 per row on phones; "5 yrs" stat -> "5-year John Deere warranty (or 5,000 hours)"; hero text overlay even on phones
+- Phone menu (all pages): order Home, Tractors, Finance, Service, Contact, Exchange, Implements, Resources, Blog, Areas; current page scrolled into view
+- Odia contact form: dropdown had no selected option and sent English; options now carry the English values (translated at tap)
+- Subsidy guide (EN + OR): 3-column subsidy table becomes stacked cards on phones
+- Farmer resources (EN + OR): removed "delivery moments will be added here" line; YouTube thumbnails maxresdefault -> hqdefault (lighter, always exists)
+- WhatsApp and phone icons on all WhatsApp/Call buttons (CSS, site-wide)
+- Checks: every click/select replayed on all pages, only intended differences; 0 broken links; markup errors 38 -> 28 (empty srcset fixed earlier); CLS 0; home realistic phone test 97-98, main photo 2.3-2.4 s
+
 ## 2026-11-21 – Technical audit, part 2: lighter Odia pages, faster Odia homepage
 - Approved by: Venu (21 Nov 2026)
 - Backup branch before change: `backup-2026-11-21-before-odia-slim`
