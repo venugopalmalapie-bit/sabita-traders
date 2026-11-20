@@ -17,6 +17,17 @@ Or restore a whole backup: repo → branch menu → pick the `backup-...` branch
 - Site-wide: new card first on the Blog page (EN + Odia) and in the Blog's blogPost list; subsidy guide links to the new post (loan section + Read next, EN; Read next, Odia); sitemap.xml (+2 URLs) and llms.txt updated
 - To undo: revert this commit
 
+## 2026-11-20 – Fixes from the 100-visitor site audit (prices, Odia WhatsApp, phone layout, facts)
+- Approved by: Venu (20 Nov 2026), after reviewing before/after previews
+- Backup branch before change: `backup-2026-11-20-before-audit-fixes`
+- Prices (homepage cards and all 20 model pages, EN + Odia): MRP shown first, after-subsidy price on its own labelled line ("After ₹1.2 lakh subsidy*: …"), 2WD and 4WD listed separately; note says the subsidy is subject to eligibility and DBT approval, with a link to the subsidy guide. Same figures as before, only the labelling changed
+- Structured data: model page offers now carry the MRP as the price (were after-subsidy "lowPrice")
+- Odia pages: WhatsApp messages now open in Odia (translated when the button is tapped; product names stay in English; the "[Website: …]" lead tag is kept)
+- Phones: model pages show the model name, description and price box before the video and spec boxes (model name now ~540 px from the top, was ~1,330 px); the other-models buttons fit in one sliding row; the main menu fades at the right edge to show it scrolls
+- Service booking form lists all 10 models
+- Fixes: the "5050D" button on 12 model pages pointed to the page itself; comparison page said "the four tractors we sell" (we sell 10); top banner "Berhampur · Aska · Bhanjanagar" now reads "Showroom in Berhampur · serving all of Ganjam" (homepage and implements page); redirect page titles; llms-full.txt now lists all 10 models and the two newest pages
+- Not changed (needs the dealer to confirm): implements page "5050D (45 HP model) · 5105 (35 HP model)" wording
+
 ## 2026-11-20 – Official John Deere videos near the top of 8 model pages (SEO/AEO/GEO/CRO, stopgap)
 - Approved by: Venu (20 Nov 2026), as a stopgap until our own Odia walkaround videos
 - Backup branch before change: `backup-2026-11-20-before-model-videos`
