@@ -17,6 +17,10 @@ Or restore a whole backup: repo → branch menu → pick the `backup-...` branch
 - Site-wide: new card first on the Blog page (EN + Odia) and in the Blog's blogPost list; subsidy guide links to the new post (loan section + Read next, EN; Read next, Odia); sitemap.xml (+2 URLs) and llms.txt updated
 - To undo: revert this commit
 
+## 2026-11-20 – Contact page: Managing Director line
+- Approved by: Venu (20 Nov 2026). "Formerly Krishna Motors" deliberately not added (old Krishna Motors listings still show other brands; revisit once they are cleaned up)
+- contact.html and or/contact.html business details: "Managing Director: M Krishna Reddy"
+
 ## 2026-11-20 – GSTIN added (lean version)
 - Approved by: Venu (20 Nov 2026): GSTIN confirmed; partnership firm; MD name and former name deliberately left out
 - Backup branch before change: `backup-2026-11-20-before-gstin`
