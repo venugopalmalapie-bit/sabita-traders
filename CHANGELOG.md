@@ -6,6 +6,12 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-21 – Self-hosted fonts (no Google Fonts)
+- Approved by: Venu (21 Nov 2026)
+- Backup branch before change: `backup-2026-11-21-before-fonts`
+- New /fonts: Oswald (500–700), Noto Sans (400–700), Noto Sans Oriya (400–700, full for Odia pages; 3 KB label subset for the "ଓଡ଼ିଆ" button on English pages), subset to characters used on the site; OFL licence files included.
+- 59 pages + review page + 404: Google Fonts preconnect/preload/noscript links replaced by inline @font-face (font-display: swap).
+
 ## 2026-11-21 – Phone speed: no second redraw on load, lighter images
 - Approved by: Venu (21 Nov 2026), after before/after test results
 - Backup branch before change: `backup-2026-11-21-before-speed` (at 70c36f5)
