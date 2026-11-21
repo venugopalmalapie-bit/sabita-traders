@@ -357,13 +357,15 @@ nav::-webkit-scrollbar{display:none}
 
   function mount(root, tpl, Component) {
     var c = new Component({}), queued = false;
+    var hyd = true;
     function draw() {
       queued = false;
       var fields = root.querySelectorAll('input,select,textarea'), a = document.activeElement, idx = -1, s0, s1;
       for (var i = 0; i < fields.length; i++) if (fields[i] === a) idx = i;
       if (idx > -1) { try { s0 = a.selectionStart; s1 = a.selectionEnd; } catch (e) {} }
-      var r = render(tpl, c.renderVals());
-      root.innerHTML = r.html;
+      var r = render(tpl, c.renderVals()), same = false;
+      if (hyd) { hyd = false; try { var t0 = document.createElement('template'); t0.innerHTML = r.html; same = t0.innerHTML.trim() === root.innerHTML.trim(); } catch (e) {} }
+      if (!same) root.innerHTML = r.html;
       root.querySelectorAll('select[value]').forEach(function (el) { el.value = el.getAttribute('value'); });
       root.querySelectorAll('textarea[value]').forEach(function (el) { el.value = el.getAttribute('value'); });
       ['click', 'change'].forEach(function (ev) {

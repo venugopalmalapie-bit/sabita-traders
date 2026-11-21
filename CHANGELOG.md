@@ -6,6 +6,14 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-21 – Phone speed: no second redraw on load, lighter images
+- Approved by: Venu (21 Nov 2026), after before/after test results
+- Backup branch before change: `backup-2026-11-21-before-speed` (at 70c36f5)
+- Runtime (52 template pages): on first mount, keep the pre-rendered page if it matches the render (only attach handlers); otherwise redraw as before.
+- Home (EN + OR): model card images use `sizes="(max-width:760px) 130px, 33vw"`; new 480w versions for 5045D, 5050D, 5405 cards.
+- Hero images (paddy field, puddling special; 480/960/full) re-encoded at WebP q68 (~25% smaller).
+- Model pages (10 EN + 10 OR): main photo `fetchpriority="high"`.
+- Local Lighthouse mobile: home 74 → 91 (LCP 3.3 s → 2.8 s); 5045D 94 → 96.
 ## 2026-11-21 – Review helper: Odia and English only
 - Approved by: Venu (21 Nov 2026) – match the website's languages
 - Backup branch before change: `backup-2026-11-21-before-remove-te-hi`
