@@ -8,21 +8,19 @@
 <title>Write a review | Sabita Traders</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Noto+Sans:wght@400;600;700&family=Noto+Sans+Oriya:wght@400;600;700&family=Noto+Sans+Telugu:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Noto+Sans:wght@400;600;700&family=Noto+Sans+Oriya:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--green:#367C2B;--yellow:#FFDE00;--ink:#27251F;--deep:#1E6B1E;--muted-bg:#F4F5F0;--muted:#5C5A52;--border:#D9DACF;--wa:#177A42;--error:#B42318;--tint:#EAF2E7;--warn-bg:#FDECEA;
-  --sans:"Noto Sans",Arial,sans-serif;--odia:"Noto Sans Oriya","Noto Sans",Arial,sans-serif;--telugu:"Noto Sans Telugu","Noto Sans",Arial,sans-serif;--deva:"Noto Sans Devanagari","Noto Sans",Arial,sans-serif;--display:Oswald,"Roboto Condensed",Arial,sans-serif}
+  --sans:"Noto Sans",Arial,sans-serif;--odia:"Noto Sans Oriya","Noto Sans",Arial,sans-serif;--display:Oswald,"Roboto Condensed",Arial,sans-serif}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--muted-bg);color:var(--ink);font:16px/1.5 var(--sans)}
-body.or{font-family:var(--odia)} body.te{font-family:var(--telugu)} body.hi{font-family:var(--deva)}
+body.or{font-family:var(--odia)}
 body.or .card h2,body.or .hero h1{font-family:var(--odia);font-weight:700}
-body.te .card h2,body.te .hero h1{font-family:var(--telugu);font-weight:700}
-body.hi .card h2,body.hi .hero h1{font-family:var(--deva);font-weight:700}
-.langbar{display:grid;grid-template-columns:repeat(4,1fr);background:#3A3832;border-bottom:1px solid #5C5A52}
+.langbar{display:grid;grid-template-columns:repeat(2,1fr);background:#3A3832;border-bottom:1px solid #5C5A52}
 .langbar button{min-height:48px;border:0;border-right:1px solid #5C5A52;background:transparent;color:#fff;font:600 16px/1.2 var(--sans);cursor:pointer}
 .langbar button:last-child{border-right:0}
 .langbar button[aria-pressed="true"]{background:var(--yellow);color:var(--ink)}
-.langbar .l-or{font-family:var(--odia)} .langbar .l-te{font-family:var(--telugu)} .langbar .l-hi{font-family:var(--deva)}
+.langbar .l-or{font-family:var(--odia)}
 .wrap{max-width:620px;margin:0 auto;min-height:100vh;background:var(--muted-bg);display:flex;flex-direction:column}
 header{background:var(--ink);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
 .brand{font:700 22px/26px var(--display)}
@@ -112,8 +110,6 @@ footer a{color:#fff}
   <div class="langbar lang" role="group" aria-label="Language">
     <button type="button" class="l-or" data-lang="or" aria-pressed="true">ଓଡ଼ିଆ</button>
     <button type="button" class="l-en" data-lang="en" aria-pressed="false">English</button>
-    <button type="button" class="l-te" data-lang="te" aria-pressed="false">తెలుగు</button>
-    <button type="button" class="l-hi" data-lang="hi" aria-pressed="false">हिंदी</button>
   </div>
   <div class="rule"></div>
 
@@ -266,82 +262,6 @@ footer a{color:#fff}
         servicetime: "ସର୍ଭିସରେ ଲାଗିଥିବା ସମୟ", partsavail: "ସ୍ପେୟାର ପାର୍ଟସର ଉପଲବ୍ଧତା"
       },
       rated: { good: "ଭଲ ଥିଲା।", ok: "ଠିକ୍ ଥିଲା।", bad: "ଭଲ ନଥିଲା।" }
-    },
-    te: {
-      tagline: "జాన్ డీర్ ట్రాక్టర్ల అధీకృత డీలర్ · బ్రహ్మపూర్",
-      title: "మీ అనుభవాన్ని పంచుకోండి",
-      intro: "కొన్ని జవాబులు ఎంచుకోండి, కావాలంటే మీ మాటల్లో రాయండి. వాటిని కలిపి ఒక రివ్యూ తయారు చేస్తాం – దాన్ని మీరు మార్చి, కాపీ చేసి, మీరే Googleలో పోస్ట్ చేయవచ్చు.",
-      s0: "1 · మీ అనుభవం ఎలా ఉంది?",
-      ready: "మీ రివ్యూ సిద్ధంగా ఉంది. కింద ఇంకా జోడించండి, లేదా",
-      jumpLink: "రివ్యూకు వెళ్ళండి ↓",
-      s1: "2 · మీరు మా దగ్గర ఏమి తీసుకున్నారు? (ఐచ్ఛికం)", s1hint: "వర్తించేవన్నీ ఎంచుకోండి.",
-      s2: "3 · ఇంకా చెప్పండి (ఐచ్ఛికం)", s2hint: "మీకు కావలసినవి మాత్రమే జవాబు ఇవ్వండి. మిగతావి వదిలేయండి.",
-      s3: "4 · మీ మాటల్లో (ఐచ్ఛికం)",
-      s3hint: "మంచిదైనా చెడ్డదైనా – మీరు చెప్పాలనుకున్నది రాయండి. మీరు రాసినట్టే మీ మాటలు జోడించబడతాయి.",
-      s4: "5 · మీ రివ్యూ", s4hint: "చదవండి. ఏదైనా మార్చవచ్చు – ఇది మీ రివ్యూ.",
-      edited: "మీరు రివ్యూను స్వయంగా మార్చారు.", rebuild: "నా జవాబుల నుండి మళ్ళీ తయారు చేయండి",
-      copy: "రివ్యూ కాపీ చేయండి", copied: "కాపీ అయింది. ఇప్పుడు “Googleలో పోస్ట్ చేయండి” నొక్కండి.",
-      copyFail: "ఆటోమేటిక్‌గా కాపీ కాలేదు. రివ్యూ బాక్స్‌లో నొక్కి పట్టుకోండి, Select all, తర్వాత Copy చేయండి.",
-      emptyReview: "ముందుగా కనీసం ఒక జవాబు ఎంచుకోండి లేదా కొన్ని మాటలు రాయండి.",
-      post: "Googleలో పోస్ట్ చేయండి ↗",
-      copyPost: "కాపీ చేసి Googleలో పోస్ట్ చేయండి ↗", copyOnly: "కాపీ మాత్రమే",
-      copiedPost: "కాపీ అయింది. Google పేజీలో: స్టార్లు ఎంచుకోండి, Paste చేయండి, Post నొక్కండి.",
-      step1: "Google పేజీలో మీ స్టార్లు ఎంచుకోండి.",
-      step2: "టెక్స్ట్ బాక్స్‌లో నొక్కి పట్టుకుని Paste చేయండి.",
-      step3: "Post నొక్కండి.",
-      helpTitle: "క్షమించండి, ఏదో సరిగ్గా లేదు.",
-      helpBody: "దయచేసి మీ నిజాయితీ రివ్యూ పోస్ట్ చేయండి. సమస్య పరిష్కారం కోసం మా టీమ్‌కు కాల్ లేదా WhatsApp చేయండి:",
-      reset: "మళ్ళీ మొదలుపెట్టండి",
-      foot1: "మీ రివ్యూ మీది. మంచి లేదా చెడు రివ్యూకు సబితా ట్రేడర్స్ ఎలాంటి బహుమతి ఇవ్వదు.",
-      foot2: "మీ రివ్యూ టెక్స్ట్ సేవ్ కాదు, మాకు పంపబడదు. ఈ పేజీ సందర్శనలను మాత్రమే లెక్కిస్తాం.",
-      good: "బాగుంది", ok: "పర్వాలేదు", bad: "బాగాలేదు", wordsPh: "ఉదా: ఏది నచ్చింది, ఏది సరిగ్గా లేదు…",
-      noAspects: "ఈ ప్రశ్నలు చూడటానికి 1 లేదా 2వ దశలో జవాబు ఎంచుకోండి.",
-      overallOnly: { good: "సబితా ట్రేడర్స్‌లో నా అనుభవం బాగుంది.", ok: "సబితా ట్రేడర్స్‌లో నా అనుభవం పర్వాలేదు.", bad: "సబితా ట్రేడర్స్‌లో నా అనుభవం బాగాలేదు." },
-      what: { tractor: "కొత్త ట్రాక్టర్", implement: "పనిముట్టు (ఇంప్లిమెంట్)", parts: "స్పేర్ పార్ట్స్", service: "ట్రాక్టర్ సర్వీస్ / రిపేర్", loan: "లోన్ సహాయం", subsidy: "సబ్సిడీ సహాయం" },
-      aspects: {
-        overall: "మొత్తం అనుభవం", staff: "సిబ్బంది ప్రవర్తన", explain: "ధర, ఫీచర్ల వివరణ",
-        delivery: "డెలివరీ సమయం", paperwork: "పత్రాల పనిలో సహాయం", servicework: "సర్వీస్ పని నాణ్యత",
-        servicetime: "సర్వీస్‌కు పట్టిన సమయం", partsavail: "స్పేర్ పార్ట్స్ లభ్యత"
-      },
-      rated: { good: "బాగుంది.", ok: "పర్వాలేదు.", bad: "బాగాలేదు." }
-    },
-    hi: {
-      tagline: "जॉन डियर ट्रैक्टर के अधिकृत डीलर · ब्रह्मपुर",
-      title: "अपना अनुभव बताइए",
-      intro: "कुछ जवाब चुनिए और चाहें तो अपने शब्दों में लिखिए। हम इन्हें जोड़कर एक रिव्यू बनाएंगे – जिसे आप बदल सकते हैं, कॉपी करके खुद Google पर पोस्ट कर सकते हैं।",
-      s0: "1 · आपका अनुभव कैसा रहा?",
-      ready: "आपका रिव्यू तैयार है। नीचे और जोड़ें, या",
-      jumpLink: "रिव्यू पर जाएं ↓",
-      s1: "2 · आपने हमसे क्या लिया? (वैकल्पिक)", s1hint: "जो लागू हो, सब चुनिए।",
-      s2: "3 · और बताइए (वैकल्पिक)", s2hint: "जितना चाहें उतना जवाब दें। बाकी छोड़ दें।",
-      s3: "4 · अपने शब्दों में (वैकल्पिक)",
-      s3hint: "अच्छा या बुरा – जो कहना चाहें लिखिए। आपके शब्द जैसे लिखेंगे वैसे ही जोड़े जाएंगे।",
-      s4: "5 · आपका रिव्यू", s4hint: "पढ़िए। जो चाहें बदल सकते हैं – यह आपका रिव्यू है।",
-      edited: "आपने रिव्यू खुद बदला है।", rebuild: "मेरे जवाबों से फिर बनाएं",
-      copy: "रिव्यू कॉपी करें", copied: "कॉपी हो गया। अब “Google पर पोस्ट करें” दबाएं।",
-      copyFail: "अपने आप कॉपी नहीं हुआ। रिव्यू बॉक्स में दबाकर रखें, Select all, फिर Copy करें।",
-      emptyReview: "पहले कम से कम एक जवाब चुनें या कुछ लिखें।",
-      post: "Google पर पोस्ट करें ↗",
-      copyPost: "कॉपी करके Google पर पोस्ट करें ↗", copyOnly: "सिर्फ कॉपी करें",
-      copiedPost: "कॉपी हो गया। Google पेज पर: स्टार चुनें, Paste करें, Post दबाएं।",
-      step1: "Google पेज पर अपने स्टार चुनें।",
-      step2: "टेक्स्ट बॉक्स में दबाकर रखें, फिर Paste करें।",
-      step3: "Post दबाएं।",
-      helpTitle: "माफ़ कीजिए, कुछ ठीक नहीं रहा।",
-      helpBody: "कृपया अपना सच्चा रिव्यू पोस्ट करें। समस्या ठीक कराने के लिए हमारी टीम को कॉल या WhatsApp करें:",
-      reset: "फिर से शुरू करें",
-      foot1: "आपका रिव्यू आपका है। अच्छे या बुरे रिव्यू के लिए सबिता ट्रेडर्स कोई इनाम नहीं देता।",
-      foot2: "आपके रिव्यू का टेक्स्ट न सेव होता है, न हमें भेजा जाता है। हम सिर्फ इस पेज पर आने वालों की गिनती करते हैं।",
-      good: "अच्छा", ok: "ठीक", bad: "अच्छा नहीं", wordsPh: "जैसे: क्या अच्छा लगा, क्या गलत हुआ…",
-      noAspects: "ये सवाल देखने के लिए पहले या दूसरे चरण में जवाब चुनें।",
-      overallOnly: { good: "सबिता ट्रेडर्स में मेरा अनुभव अच्छा रहा।", ok: "सबिता ट्रेडर्स में मेरा अनुभव ठीक रहा।", bad: "सबिता ट्रेडर्स में मेरा अनुभव अच्छा नहीं रहा।" },
-      what: { tractor: "नया ट्रैक्टर", implement: "उपकरण (इम्प्लीमेंट)", parts: "स्पेयर पार्ट्स", service: "ट्रैक्टर सर्विस / मरम्मत", loan: "लोन सहायता", subsidy: "सब्सिडी सहायता" },
-      aspects: {
-        overall: "कुल अनुभव", staff: "स्टाफ का व्यवहार", explain: "कीमत और खूबियाँ समझाना",
-        delivery: "डिलीवरी का समय", paperwork: "कागज़ी काम में मदद", servicework: "सर्विस काम की गुणवत्ता",
-        servicetime: "सर्विस में लगा समय", partsavail: "स्पेयर पार्ट्स की उपलब्धता"
-      },
-      rated: { good: "अच्छा रहा।", ok: "ठीक रहा।", bad: "अच्छा नहीं रहा।" }
     }
   };
 
@@ -371,7 +291,7 @@ footer a{color:#fff}
   /* ---------- sentence building (only from what the customer chose or wrote) ---------- */
   function joinList(items, lang) {
     if (items.length <= 1) return items.join("");
-    var and = { en: " and ", or: " ଓ ", te: " మరియు ", hi: " और " }[lang];
+    var and = { en: " and ", or: " ଓ " }[lang];
     return items.slice(0, -1).join(", ") + and + items[items.length - 1];
   }
   function introSentences(lang) {
@@ -386,26 +306,6 @@ footer a{color:#fff}
       if (w.loan) help.push("the loan");
       if (w.subsidy) help.push("the subsidy application");
       if (help.length) s.push((s.length ? "I also needed help with " : "I needed help from Sabita Traders with ") + joinList(help, lang) + ".");
-    } else if (lang === "te") {
-      if (w.tractor) bought.push("కొత్త ట్రాక్టర్");
-      if (w.implement) bought.push("ఒక పనిముట్టు");
-      if (w.parts) bought.push("స్పేర్ పార్ట్స్");
-      if (bought.length) s.push("నేను సబితా ట్రేడర్స్ నుండి " + joinList(bought, lang) + " కొన్నాను.");
-      if (w.service) s.push(bought.length ? "ఇక్కడ నా ట్రాక్టర్ సర్వీస్ కూడా చేయించుకున్నాను." : "నేను సబితా ట్రేడర్స్‌లో నా ట్రాక్టర్ సర్వీస్ చేయించుకున్నాను.");
-      var helpT = [];
-      if (w.loan) helpT.push("లోన్");
-      if (w.subsidy) helpT.push("సబ్సిడీ దరఖాస్తు");
-      if (helpT.length) s.push((s.length ? "నాకు " + joinList(helpT, lang) + " కోసం కూడా సహాయం అవసరమైంది." : "నాకు సబితా ట్రేడర్స్ నుండి " + joinList(helpT, lang) + " కోసం సహాయం అవసరమైంది."));
-    } else if (lang === "hi") {
-      if (w.tractor) bought.push("नए ट्रैक्टर");
-      if (w.implement) bought.push("एक उपकरण");
-      if (w.parts) bought.push("स्पेयर पार्ट्स");
-      if (bought.length) s.push("मैंने सबिता ट्रेडर्स से " + joinList(bought, lang) + " की खरीदारी की।");
-      if (w.service) s.push(bought.length ? "मैंने यहाँ अपने ट्रैक्टर की सर्विस भी करवाई।" : "मैंने सबिता ट्रेडर्स में अपने ट्रैक्टर की सर्विस करवाई।");
-      var helpH = [];
-      if (w.loan) helpH.push("लोन");
-      if (w.subsidy) helpH.push("सब्सिडी आवेदन");
-      if (helpH.length) s.push((s.length ? "मुझे " + joinList(helpH, lang) + " के लिए भी मदद चाहिए थी।" : "मुझे सबिता ट्रेडर्स से " + joinList(helpH, lang) + " के लिए मदद चाहिए थी।"));
     } else {
       if (w.tractor) bought.push("ନୂଆ ଟ୍ରାକ୍ଟର");
       if (w.implement) bought.push("ଯନ୍ତ୍ରପାତି");
