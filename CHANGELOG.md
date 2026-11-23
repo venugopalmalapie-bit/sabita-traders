@@ -6,6 +6,12 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-24 – Justdial listing linked as an official page
+- Approved by: Venu (24 Nov 2026)
+- Backup branch before change: `backup-2026-11-24-before-justdial-link`
+- Facts page (EN + Odia): Justdial added to "Our official pages" (listing 9999PX680…H2V9, renamed from Krishna Motors; Justdial ticket LCS-6WJYILN8).
+- Home page (EN + Odia): Justdial listing added to Organization `sameAs`.
+
 ## 2026-11-24 – IndiaMART catalogue linked as an official page
 - Approved by: Venu (24 Nov 2026)
 - Backup branch before change: `backup-2026-11-24-before-indiamart-link`
