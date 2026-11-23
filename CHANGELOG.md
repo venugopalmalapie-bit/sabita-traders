@@ -6,6 +6,13 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-24 – "Facts about us" page (EN + Odia)
+- Approved by: Venu (24 Nov 2026)
+- Backup branch before change: `backup-2026-11-24-before-facts`
+- New pages: /sabita-traders-facts.html and /or/sabita-traders-facts.html — dated key facts (address, hours, phones, models, subsidy, 11 finance partners, started 2021 as Sabita Traders), key-facts box first, AboutPage + Breadcrumb schema.
+- Footer on 60 pages: "Facts about us" link next to Privacy.
+- llms.txt: facts page listed first under Key facts. Sitemap: both pages added.
+
 ## 2026-11-21 – Self-hosted fonts (no Google Fonts)
 - Approved by: Venu (21 Nov 2026)
 - Backup branch before change: `backup-2026-11-21-before-fonts`
