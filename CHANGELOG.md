@@ -6,6 +6,12 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-24 – IndiaMART catalogue linked as an official page
+- Approved by: Venu (24 Nov 2026)
+- Backup branch before change: `backup-2026-11-24-before-indiamart-link`
+- Facts page (EN + Odia): IndiaMART added to "Our official pages" (https://www.indiamart.com/sabitatraders-berhampur/).
+- Home page (EN + Odia): IndiaMART catalogue added to Organization `sameAs` in structured data.
+
 ## 2026-11-24 – Finance page answers (S2) and "How did you hear about us?" (M2)
 - Approved by: Venu (24 Nov 2026)
 - Backup branch before change: `backup-2026-11-24-before-s2`
