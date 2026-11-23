@@ -6,6 +6,12 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-24 – Google Analytics loads after the page
+- Approved by: Venu (24 Nov 2026)
+- Backup branch before change: `backup-2026-11-24-before-ga-defer`
+- All 63 pages: the Google Analytics (gtag.js) script now loads after the page's load event instead of during load, so it no longer competes with the main photo on slow connections. Event queueing (dataLayer) unchanged; very quick bounces (<1–2 s) may go unrecorded.
+- Home (EN + Odia): second slideshow photo set to low fetch priority (still loads early).
+
 ## 2026-11-24 – Smaller tractor card photos for phones
 - Approved by: Venu (24 Nov 2026)
 - Backup branch before change: `backup-2026-11-24-before-card-thumbs`
