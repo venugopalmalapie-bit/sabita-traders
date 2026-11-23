@@ -6,6 +6,12 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-24 – Clearer phone-number wording (Facts page + llms.txt)
+- Approved by: Venu (24 Nov 2026)
+- Backup branch before change: `backup-2026-11-24-before-phone-wording`
+- Facts page (EN + Odia): "not ours" line replaced with positive wording: call/WhatsApp 89085 89085 (main) or 93375 00337; only numbers used for sales, service and enquiries; if another website shows a different number, use 89085 89085. No other numbers named.
+- llms.txt and llms-full.txt: added the same statement under the phone line.
+
 ## 2026-11-24 – Justdial listing linked as an official page
 - Approved by: Venu (24 Nov 2026)
 - Backup branch before change: `backup-2026-11-24-before-justdial-link`
