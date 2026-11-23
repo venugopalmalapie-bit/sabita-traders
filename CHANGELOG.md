@@ -6,6 +6,11 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-24 – Official sources line on subsidy posts (S4)
+- Approved by: Venu (24 Nov 2026)
+- Backup branch before change: `backup-2026-11-24-before-s4`
+- Subsidy guide and "Not eligible" post (EN + Odia): "Official sources" line under the Quick answer box (FM-DBT portal, Go-Sugam, Krushak Odisha, Operational Modality 2026 PDF) with the date facts were checked (21 Nov / 20 Nov 2026). Portal and PDF re-validated live on 24 Nov.
+
 ## 2026-11-24 – Name Sabita in 2WD/4WD and 5045D vs 5050D answers (S3)
 - Approved by: Venu (24 Nov 2026)
 - Backup branch before change: `backup-2026-11-24-before-s3`
