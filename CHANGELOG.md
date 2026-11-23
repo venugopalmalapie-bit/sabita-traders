@@ -6,6 +6,13 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-24 – Name Sabita in 2WD/4WD and 5045D vs 5050D answers (S3)
+- Approved by: Venu (24 Nov 2026)
+- Backup branch before change: `backup-2026-11-24-before-s3`
+- 5045D PowerPro (EN + Odia): new FAQ "Should I buy the 5045D 2WD or 4WD for paddy?" (2nd), naming Sabita Traders; FAQ schema updated.
+- Compare page (EN + Odia): opening line names Sabita Traders; new FAQ "5045D or 5050D: which is better for wet paddy land?" (2nd); FAQ schema updated.
+- Sitemap lastmod updated for the 4 pages.
+
 ## 2026-11-24 – "Facts about us" page (EN + Odia)
 - Approved by: Venu (24 Nov 2026)
 - Backup branch before change: `backup-2026-11-24-before-facts`
