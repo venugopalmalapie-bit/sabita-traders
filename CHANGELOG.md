@@ -6,6 +6,12 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-24 – Finance page answers (S2) and "How did you hear about us?" (M2)
+- Approved by: Venu (24 Nov 2026)
+- Backup branch before change: `backup-2026-11-24-before-s2`
+- Finance & EMI page (EN + Odia): Quick answer box (lenders, CIBIL above 700, example EMI, documents, loan + subsidy), Example EMIs table (₹6 / ₹8 lakh, 5 years, 9/12/14% example rates, not offers), 3 new FAQs at the top (EMI on ₹8 lakh, fastest bank, low CIBIL) plus FAQ schema.
+- Enquiry forms on 22 pages (EN + Odia): optional "How did you hear about us?" drop-down. Choice is added to the WhatsApp message as "Heard via: …" and sent to Google Analytics as `heard` on `enquiry_submit` (no personal data).
+
 ## 2026-11-24 – Official sources line on subsidy posts (S4)
 - Approved by: Venu (24 Nov 2026)
 - Backup branch before change: `backup-2026-11-24-before-s4`

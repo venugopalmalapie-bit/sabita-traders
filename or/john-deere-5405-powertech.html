@@ -552,12 +552,13 @@ DCRT.mount(document.getElementById("app"),"\n\n<div style=\"background:#FFFFFF;c
     var h=a.getAttribute('href')||'',pl=place(a),lb=(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,60);
     if(h.indexOf('wa.me/')>-1){
       var d=decodeURIComponent(h),m=d.match(/Ref ([A-Z0-9]{4})\]/),r=m?m[1]:ref();
+      var fm=a.closest('#enquiry,#enquiry-form'),hs=fm&&fm.querySelector('select[data-heard]'),hv=hs?hs.value:'';
       if(d.indexOf('[Website:')<0){
-        var tag=' [Website: '+page+' · Ref '+r+']';
+        var tag=(hv?' Heard via: '+hv+'.':'')+' [Website: '+page+' · Ref '+r+']';
         a.setAttribute('href',h.indexOf('text=')>-1?h.replace(/(text=)([^&]*)/,function(x,p,t){return p+t+encodeURIComponent(tag);}):h+(h.indexOf('?')>-1?'&':'?')+'text='+encodeURIComponent('Hi Sabita Traders,'+tag));
       }
       track('whatsapp_click',{label:lb,placement:pl,wa_ref:r});
-      if(pl==='enquiry_form'){var s=a.closest('#enquiry,#enquiry-form').querySelector('select');track('enquiry_submit',{placement:pl,wa_ref:r,need:s?s.value:''});}
+      if(pl==='enquiry_form'){var s=fm.querySelector('select:not([data-heard])');track('enquiry_submit',{placement:pl,wa_ref:r,need:s?s.value:'',heard:hv||'not given'});}
     } else if(h.indexOf('tel:')===0) track('call_click',{label:lb,placement:pl});
     else if(/google\.[a-z.]+\/maps|maps\.app\.goo\.gl|goo\.gl\/maps/.test(h)) track('directions_click',{placement:pl});
     else if(/g\.page\/r\/|writereview/.test(h)) track('review_click',{placement:pl});
