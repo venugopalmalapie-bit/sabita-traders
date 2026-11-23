@@ -6,6 +6,11 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-24 – Smaller tractor card photos for phones
+- Approved by: Venu (24 Nov 2026)
+- Backup branch before change: `backup-2026-11-24-before-card-thumbs`
+- 240 px and 360 px versions of all 13 tractor photos added to srcset on 10 pages (home, comparison and model pages, EN + Odia). Phones now download ~3–9 KB per card photo instead of 8–20 KB (home cards ~150 KB → ~66 KB). No visual change.
+
 ## 2026-11-24 – Mobile readability and speed
 - Approved by: Venu (24 Nov 2026)
 - Backup branch before change: `backup-2026-11-24-before-mobile-speed`
