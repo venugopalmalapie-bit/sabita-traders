@@ -6,6 +6,12 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-24 – Odia button font + contact map fallback
+- Approved by: Venu (24 Nov 2026)
+- Backup branch before change: `backup-2026-11-24-before-odia-font-map`
+- All English pages: the "ଓଡ଼ିଆ" language button now uses the Noto Sans Oriya label font already loaded (was defined but never applied), so it no longer shows empty boxes on devices/crawlers without an Odia font.
+- Contact page (EN + Odia): address and an "Open in Google Maps" link sit behind the map, so the box is never blank when the map cannot load; the live map covers it as before.
+
 ## 2026-11-24 – Clearer phone-number wording (Facts page + llms.txt)
 - Approved by: Venu (24 Nov 2026)
 - Backup branch before change: `backup-2026-11-24-before-phone-wording`
