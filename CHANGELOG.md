@@ -6,6 +6,14 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-24 – Mobile readability and speed
+- Approved by: Venu (24 Nov 2026)
+- Backup branch before change: `backup-2026-11-24-before-mobile-speed`
+- All pages (EN + Odia): text links at least 24 px tall; on phones, body text 14–15 px raised to 16 px (Odia 17 px); model-page menu fades at the edge to show it scrolls.
+- All enquiry forms: autocomplete for name, mobile and village (68 fields).
+- Home (EN + Odia): second slideshow photo no longer lazy/low priority (it was the measured LCP image, 3.9 s on mobile); 720 px versions of both slideshow photos added to srcset.
+- Re-compressed six large photos (workshop, 5405, 5105 4WD, 5310, 5042D) with no visible loss; leaflets/brochure untouched.
+
 ## 2026-11-24 – Odia button font + contact map fallback
 - Approved by: Venu (24 Nov 2026)
 - Backup branch before change: `backup-2026-11-24-before-odia-font-map`
