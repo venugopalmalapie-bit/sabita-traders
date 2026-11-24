@@ -6,6 +6,12 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-24 – Shorter titles and leaflet alt text (Bing Site Scan)
+- Approved by: Venu (24 Nov 2026)
+- Backup branch before change: `backup-2026-11-24-before-titles-alt`
+- Titles under 70 characters: 3036EN (EN + Odia) drops "Narrow Orchard" from the title; Facts page drops ", Ganjam". og/twitter titles updated to match.
+- Alt text added to the leaflet thumbnail on 5039D and 5105 pages (EN + Odia).
+
 ## 2026-11-24 – Google Analytics loads after the page
 - Approved by: Venu (24 Nov 2026)
 - Backup branch before change: `backup-2026-11-24-before-ga-defer`
