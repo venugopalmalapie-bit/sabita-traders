@@ -6,6 +6,13 @@ so any change can be undone. Before each batch a backup branch is pushed (`backu
 How to roll back (GitHub web): open the repo → Commits → pick the commit → "Revert".
 Or restore a whole backup: repo → branch menu → pick the `backup-...` branch → Code → Download ZIP.
 
+## 2026-11-26 – Odia font after page load; new post "5036D or 5045D"; puddling-guide link fix
+- Approved by: Venu (26 Nov 2026)
+- Backup branch before change: `backup-2026-11-26-before-odia-font-5036d-post`
+- All 32 Odia pages: the Odia web font (noto-sans-oriya.woff2, 73 KB) now loads after the page's load event instead of with the page, so the main photo and text are not held back by it. Text shows in the phone's own Odia font for a moment, then switches. Local Lighthouse (mobile, median of 3) on the Odia home: first paint 1.65 → 1.06 s, LCP 2.40 → 1.96 s. Screenshots identical once the font has loaded.
+- New blog post (EN + Odia): "John Deere 5036D or 5045D for a small farm in Ganjam?" (john-deere-5036d-vs-5045d-small-farm-ganjam.html). Specs from deere.co.in checked 25 Nov 2026; approved price ranges only; FAQPage schema. Added to blog.html (EN + Odia), sitemap.xml, llms.txt and llms-full.txt.
+- 40–50 HP guide (EN + Odia): "paddy puddling guide" and the "Best tractor for paddy puddling" read-next link now go to the puddling post (they pointed back to the same page).
+
 ## 2026-11-24 – Shorter titles and leaflet alt text (Bing Site Scan)
 - Approved by: Venu (24 Nov 2026)
 - Backup branch before change: `backup-2026-11-24-before-titles-alt`
